@@ -9,8 +9,9 @@ namespace QuanLyNhanSu.Model
     internal class ChucVuNhanVien
     {
         public string MaNV { get; set; }
+        public string TenNV { get; set; }
         public string MaCV { get; set; }
-        public string TenCV { get;set; }
+        public string TenCV { get; set; }
         public DateTime? NgayBD { get; set; }
         public DateTime? NgayKT { get; set; }
     }

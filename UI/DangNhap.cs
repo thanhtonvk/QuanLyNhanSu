@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu
 {
-    public partial class Form1 : Form
+    public partial class DangNhap : Form
     {
-        public Form1()
+        public DangNhap()
         {
             InitializeComponent();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DangKy dangKy = new DangKy();
+            dangKy.ShowDialog();
         }
     }
 }

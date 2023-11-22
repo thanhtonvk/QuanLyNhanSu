@@ -17,7 +17,8 @@ namespace QuanLyNhanSu.DAO
         public List<CheDoNhanVien> GetAll()
         {
             List<CheDoNhanVien> cheDoNhanViens = new List<CheDoNhanVien>();
-            string query = "SELECT * FROM CheDoNhanVien";
+            string query =
+                "SELECT CheDoNhanVien.MaNV,TenNV,TenCD, CheDo.MaCD, NgayBD, NgayKT FROM CheDoNhanVien,CheDo,NhanVien where CheDo.MaCD = CheDoNhanVien.MaCD and NhanVien.MaNV = CheDoNhanVien.MaNV";
             DataTable dataTable = _handle.ExecuteQuery(query);
             foreach (DataRow row in dataTable.Rows)
             {
@@ -26,7 +27,9 @@ namespace QuanLyNhanSu.DAO
                     MaNV = row["MaNV"].ToString(),
                     MaCD = row["MaCD"].ToString(),
                     NgayBD = DateTime.Parse(row["NgayBD"].ToString()),
-                    NgayKT = DateTime.Parse(row["NgayKT"].ToString())
+                    NgayKT = DateTime.Parse(row["NgayKT"].ToString()),
+                    TenCD = row["TenCD"].ToString(),
+                    TenNV = row["TenNV"].ToString()
                 });
             }
 

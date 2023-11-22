@@ -40,7 +40,7 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(User user,string username)
+        public bool Update(User user, string username)
         {
             string query =
                 $"update [User] set HoTen = N'{user.HoTen}',Password='{user.Password}',Quyen='{user.Quyen}' where UserName = '{username}'";

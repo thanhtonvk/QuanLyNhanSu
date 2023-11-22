@@ -9,6 +9,7 @@ namespace QuanLyNhanSu.Model
     internal class BaoHiemNhanVien
     {
         public string MaNV { get; set; }
+        public string TenNV { get; set; }
         public string MaBH { get; set; }
         public string TenBH { get; set; }
         public DateTime? NgayBD { get; set; }

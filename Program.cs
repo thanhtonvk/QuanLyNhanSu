@@ -16,23 +16,9 @@ namespace QuanLyNhanSu
         [STAThread]
         static void Main()
         {
-            // Application.EnableVisualStyles();
-            // Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Form1());
-            UserDAO userDao = new UserDAO();
-            userDao.Insert(new User()
-            {
-                HoTen = "Do thanh ton",
-                Password = "12345",
-                Quyen = "Admin",
-                UserName = "hello"
-            });
-            List<User> list = userDao.Gets("");
-            foreach (User user in list)
-            {
-                Console.WriteLine(user.UserName);
-            }
-            
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new DangNhap());
         }
     }
 }

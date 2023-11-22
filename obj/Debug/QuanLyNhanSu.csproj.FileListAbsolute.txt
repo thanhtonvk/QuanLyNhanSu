@@ -8,3 +8,5 @@ D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileIn
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.SuggestedBindingRedirects.cache
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.DangNhap.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.DangKy.resources
