@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using QuanLyNhanSu.Model;
 
 namespace QuanLyNhanSu.DAO
@@ -14,7 +13,22 @@ namespace QuanLyNhanSu.DAO
         {
             _handle = new DataHandle();
         }
+        public List<NgoaiNgu> GetAll()
+        {
+            List<NgoaiNgu> ngoaiNgus = new List<NgoaiNgu>();
+            string query = "SELECT * FROM NgoaiNgu";
+            DataTable dataTable = _handle.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ngoaiNgus.Add(new NgoaiNgu()
+                {
+                    MaNN = row["MaNN"].ToString(),
+                    TenNN = row["TenNN"].ToString()
+                });
+            }
 
+            return ngoaiNgus;
+        }
         public List<NgoaiNgu> Get(string keyword)
         {
             List<NgoaiNgu> ngoaiNgus = new List<NgoaiNgu>();
@@ -41,8 +55,15 @@ namespace QuanLyNhanSu.DAO
 
         public bool UpdateNgoaiNgu(string maNN, string tenNN)
         {
-            string query = $"UPDATE NgoaiNgu SET TenNN = N'{tenNN}' WHERE MaNN = '{maNN}'";
-            return _handle.ExecuteNonQuery(query);
+            string queryCheck = $"select * from [NgoaiNgu] where MaNN = N'{maNN}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string query = $"UPDATE NgoaiNgu SET TenNN = N'{tenNN}' WHERE MaNN = '{maNN}'";
+                return _handle.ExecuteNonQuery(query);
+            }
+            return false;
+
         }
 
 

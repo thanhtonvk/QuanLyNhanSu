@@ -30,7 +30,7 @@ namespace QuanLyNhanSu.DAO
 
             return phongBans;
         }
-
+     
         public bool Insert(PhongBan phongBan)
         {
             string query = $"INSERT INTO PhongBan (MaPB, TenPB) VALUES ('{phongBan.MaPB}', N'{phongBan.TenPB}')";
@@ -40,9 +40,15 @@ namespace QuanLyNhanSu.DAO
 
         public bool Update(PhongBan phongBan)
         {
-            string query = $"UPDATE PhongBan SET TenPB = N'{phongBan.TenPB}' WHERE MaPB = '{phongBan.MaPB}'";
-            bool result = _handle.ExecuteNonQuery(query);
-            return result;
+            string queryCheck = $"select * from [PhongBan] where MaPB = N'{phongBan.MaPB}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string query = $"UPDATE PhongBan SET TenPB = N'{phongBan.TenPB}' WHERE MaPB = '{phongBan.MaPB}'";
+                bool result = _handle.ExecuteNonQuery(query);
+                return result;
+            }
+            return false;
         }
 
         public bool Delete(string maPB)

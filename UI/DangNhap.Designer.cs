@@ -87,6 +87,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -125,6 +126,7 @@
             this.Text = "Đăng nhập phần mềm quản lý nhân sự";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.LinkLabel linkLabel2;

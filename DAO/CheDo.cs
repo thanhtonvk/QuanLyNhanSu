@@ -39,12 +39,20 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(CheDo cheDo, string maCD)
+        public bool Update(CheDo cheDo)
         {
-            string query = $"UPDATE CheDo SET TenCD = N'{cheDo.TenCD}' " +
-                           $"WHERE MaCD = '{maCD}'";
-            bool result = _handle.ExecuteNonQuery(query);
-            return result;
+           
+            string queryCheck = $"select * from [CheDo] where MaCD = N'{cheDo.MaCD}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string query = $"UPDATE CheDo SET TenCD = N'{cheDo.TenCD}' " +
+                            $"WHERE MaCD = '{cheDo.MaCD}'";
+                bool result = _handle.ExecuteNonQuery(query);
+                return result;
+            }
+            return false;
+
         }
 
         public bool Delete(string maCD)

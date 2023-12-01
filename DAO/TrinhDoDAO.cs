@@ -30,7 +30,22 @@ namespace QuanLyNhanSu.DAO
 
             return trinhDoList;
         }
+        public List<TrinhDo> GetAll()
+        {
+            List<TrinhDo> list = new List<TrinhDo>();
+            string query = "SELECT * FROM TrinhDo";
+            DataTable dataTable = _handle.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                list.Add(new TrinhDo()
+                {
+                    MaTD = row["MaTD"].ToString(),
+                    TenTD = row["TenTD"].ToString()
+                });
+            }
 
+            return list;
+        }
         public bool Insert(TrinhDo trinhDo)
         {
             string insertQuery = $"INSERT INTO TrinhDo (MaTD, TenTD) VALUES (N'{trinhDo.MaTD}', N'{trinhDo.TenTD}')";
@@ -38,11 +53,18 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(TrinhDo trinhDo, string maTd)
+        public bool Update(TrinhDo trinhDo)
         {
-            string insertQuery = $"Update TrinhDo set TenTD = N'{trinhDo.TenTD}' where MaTD = '{maTd}'";
-            bool result = _handle.ExecuteNonQuery(insertQuery);
-            return result;
+
+            string queryCheck = $"select * from [TrinhDo] where MaTD = N'{trinhDo.MaTD}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string insertQuery = $"Update TrinhDo set TenTD = N'{trinhDo.TenTD}' where MaTD = '{trinhDo.MaTD}'";
+                bool result = _handle.ExecuteNonQuery(insertQuery);
+                return result;
+            }
+            return false;
         }
 
         public bool Delete(string maTd)

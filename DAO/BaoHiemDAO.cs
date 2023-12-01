@@ -40,9 +40,16 @@ namespace QuanLyNhanSu.DAO
 
         public bool Update(BaoHiem baoHiem)
         {
-            string query = $"UPDATE BaoHiem SET TenBH = N'{baoHiem.TenBH}' WHERE MaBH = '{baoHiem.MaBH}'";
-            bool result = _handle.ExecuteNonQuery(query);
-            return result;
+           
+            string queryCheck = $"select * from [BaoHiem] where MaBH = N'{baoHiem.MaBH}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string query = $"UPDATE BaoHiem SET TenBH = N'{baoHiem.TenBH}' WHERE MaBH = '{baoHiem.MaBH}'";
+                bool result = _handle.ExecuteNonQuery(query);
+                return result;
+            }
+            return false;
         }
 
         public bool Delete(string maBH)

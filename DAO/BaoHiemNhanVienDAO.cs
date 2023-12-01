@@ -13,7 +13,29 @@ namespace QuanLyNhanSu.DAO
         {
             _handle = new DataHandle();
         }
+        public List<BaoHiemNhanVien> Get(string maNV)
+        {
+            List<BaoHiemNhanVien> baoHiemNhanViens = new List<BaoHiemNhanVien>();
+            string query =
+                $"SELECT NhanVien.MaNV,NhanVien.TenNV,BaoHiemNhanVien.MABH, NGAYBD, NGAYKT, NOICAP, GHICHU,TENBH FROM BaoHiemNhanVien,BaoHiem,NhanVien where BaoHiem.MaBH = BaoHiemNhanVien.MaBH and BaoHiemNhanVien.MaNV = NhanVien.MaNV and  BaoHiemNhanVien.MaNV = '{maNV}'";
+            DataTable dataTable = _handle.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                baoHiemNhanViens.Add(new BaoHiemNhanVien()
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    MaBH = row["MaBH"].ToString(),
+                    NgayBD = DateTime.Parse(row["NgayBD"].ToString()),
+                    NgayKT = DateTime.Parse(row["NgayKT"].ToString()),
+                    NoiCap = row["NoiCap"].ToString(),
+                    GhiChu = row["GhiChu"].ToString(),
+                    TenBH = row["TenBH"].ToString(),
+                    TenNV = row["TenNV"].ToString()
+                });
+            }
 
+            return baoHiemNhanViens;
+        }
         public List<BaoHiemNhanVien> GetAll()
         {
             List<BaoHiemNhanVien> baoHiemNhanViens = new List<BaoHiemNhanVien>();
@@ -48,12 +70,12 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(BaoHiemNhanVien baoHiemNhanVien, string maNV, string maBH)
+        public bool Update(BaoHiemNhanVien baoHiemNhanVien)
         {
             string query = $"UPDATE BaoHiemNhanVien SET NgayBD = '{baoHiemNhanVien.NgayBD}', " +
                            $"NgayKT = '{baoHiemNhanVien.NgayKT}', NoiCap = N'{baoHiemNhanVien.NoiCap}', " +
                            $"GhiChu = N'{baoHiemNhanVien.GhiChu}' " +
-                           $"WHERE MaNV = '{maNV}' AND MaBH = '{maBH}'";
+                           $"WHERE MaNV = '{baoHiemNhanVien.MaNV}' AND MaBH = '{baoHiemNhanVien.MaBH}'";
             bool result = _handle.ExecuteNonQuery(query);
             return result;
         }

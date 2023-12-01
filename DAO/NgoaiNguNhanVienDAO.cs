@@ -14,7 +14,25 @@ namespace QuanLyNhanSu.DAO
         {
             _handle = new DataHandle();
         }
+        public List<NgoaiNguNhanVien> GetAll()
+        {
+            List<NgoaiNguNhanVien> ngoaiNguNhanViens = new List<NgoaiNguNhanVien>();
+            string query =
+                $"SELECT NgoaiNguNhanVien.MaNV, NgoaiNguNhanVien.MaNN, NgoaiNguNhanVien.NgayCap, NgoaiNgu.TenNN FROM NgoaiNguNhanVien INNER JOIN NgoaiNgu ON NgoaiNguNhanVien.MaNN = NgoaiNgu.MaNN";
+            DataTable dataTable = _handle.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ngoaiNguNhanViens.Add(new NgoaiNguNhanVien()
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    MaNN = row["MaNN"].ToString(),
+                    NgayCap =DateTime.Parse(row["NgayCap"].ToString()),
+                    TenNN = row["TenNN"].ToString()
+                });
+            }
 
+            return ngoaiNguNhanViens;
+        }
         public List<NgoaiNguNhanVien> Get(string maNV)
         {
             List<NgoaiNguNhanVien> ngoaiNguNhanViens = new List<NgoaiNguNhanVien>();
@@ -27,8 +45,7 @@ namespace QuanLyNhanSu.DAO
                 {
                     MaNV = row["MaNV"].ToString(),
                     MaNN = row["MaNN"].ToString(),
-                    NgayCap = DateTime.ParseExact(row["NgayCap"].ToString(), "yyyy-MM-dd HH:mm:ss",
-                        CultureInfo.InvariantCulture),
+                    NgayCap = DateTime.Parse(row["NgayCap"].ToString()),
                     TenNN = row["TenNN"].ToString()
                 });
             }
@@ -44,10 +61,10 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(NgoaiNguNhanVien ngoaiNguNhanVien, string maNV, string maNN)
+        public bool Update(NgoaiNguNhanVien ngoaiNguNhanVien)
         {
             string query =
-                $"UPDATE NgoaiNguNhanVien SET NgayCap = '{ngoaiNguNhanVien.NgayCap:yyyy-MM-dd HH:mm:ss}' WHERE MaNV = '{maNV}' AND MaNN = '{maNN}'";
+                $"UPDATE NgoaiNguNhanVien SET NgayCap = '{ngoaiNguNhanVien.NgayCap:yyyy-MM-dd HH:mm:ss}' WHERE MaNV = '{ngoaiNguNhanVien.MaNV}' AND MaNN = '{ngoaiNguNhanVien.MaNN}'";
             bool result = _handle.ExecuteNonQuery(query);
             return result;
         }

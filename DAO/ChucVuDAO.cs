@@ -40,9 +40,15 @@ namespace QuanLyNhanSu.DAO
 
         public bool Update(ChucVu chucVu)
         {
-            string query = $"UPDATE ChucVu SET TenCV = N'{chucVu.TenCV}' WHERE MaCV = '{chucVu.MaCV}'";
-            bool result = _handle.ExecuteNonQuery(query);
-            return result;
+            string queryCheck = $"select * from [ChucVu] where MaCV = N'{chucVu.MaCV}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string query = $"UPDATE ChucVu SET TenCV = N'{chucVu.TenCV}' WHERE MaCV = '{chucVu.MaCV}'";
+                bool result = _handle.ExecuteNonQuery(query);
+                return result;
+            }
+            return false;
         }
 
         public bool Delete(string maCV)

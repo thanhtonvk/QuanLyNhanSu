@@ -125,6 +125,7 @@ namespace QuanLyNhanSu
             this.Name = "DangKy";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.Button button1;

@@ -9,7 +9,7 @@ create table NhanVien
     TenNV    nvarchar(50) not null,
     NgaySinh datetime,
     DiaChi   nvarchar(50),
-    GioiTinh bit,
+    GioiTinh int,
     MaPB     varchar(10)  not null,
     MaTD     varchar(10)  not null,
     MaBL     varchar(10)  not null

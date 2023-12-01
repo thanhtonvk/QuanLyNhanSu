@@ -35,7 +35,28 @@ namespace QuanLyNhanSu.DAO
 
             return cheDoNhanViens;
         }
+        public List<CheDoNhanVien> Get(string maNV)
+        {
+            List<CheDoNhanVien> cheDoNhanViens = new List<CheDoNhanVien>();
+            string query =
+                $"SELECT CheDoNhanVien.MaNV,TenNV,TenCD, CheDo.MaCD, NgayBD, NgayKT FROM CheDoNhanVien,CheDo,NhanVien where CheDo.MaCD = CheDoNhanVien.MaCD and NhanVien.MaNV = CheDoNhanVien.MaNV  and  CheDoNhanVien.MaNV = '{maNV}'";
+            DataTable dataTable = _handle.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                cheDoNhanViens.Add(new CheDoNhanVien()
+                {
+                    MaNV = row["MaNV"].ToString(),
+                    MaCD = row["MaCD"].ToString(),
+                    NgayBD = DateTime.Parse(row["NgayBD"].ToString()),
+                    NgayKT = DateTime.Parse(row["NgayKT"].ToString()),
+                    TenCD = row["TenCD"].ToString(),
+                    TenNV = row["TenNV"].ToString()
+                });
+            }
 
+            return cheDoNhanViens;
+        }
+      
         public bool Insert(CheDoNhanVien cheDoNhanVien)
         {
             string query = $"INSERT INTO CheDoNhanVien (MaNV, MaCD, NgayBD, NgayKT) " +
@@ -45,11 +66,11 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(CheDoNhanVien cheDoNhanVien, string maNV, string maCD)
+        public bool Update(CheDoNhanVien cheDoNhanVien)
         {
             string query = $"UPDATE CheDoNhanVien " +
                            $"SET NgayBD = '{cheDoNhanVien.NgayBD}', NgayKT = '{cheDoNhanVien.NgayKT}' " +
-                           $"WHERE MaNV = '{maNV}' AND MaCD = '{maCD}'";
+                           $"WHERE MaNV = '{cheDoNhanVien.MaNV}' AND MaCD = '{cheDoNhanVien.MaCD}'";
             bool result = _handle.ExecuteNonQuery(query);
             return result;
         }

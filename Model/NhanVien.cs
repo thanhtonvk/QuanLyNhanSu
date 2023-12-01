@@ -12,12 +12,9 @@ namespace QuanLyNhanSu.Model
         public string TenNV { get; set; }
         public DateTime? NgaySinh { get; set; }
         public string DiaChi { get; set; }
-        public bool? GioiTinh { get; set; }
+        public int GioiTinh { get; set; }
         public string MaPB { get; set; }
         public string MaTD { get; set; }
         public string MaBL { get; set; }
-        public string TenPB { get; set; }
-        public string TenTd { get; set; }
-        public string TenBL { get; set;}
     }
 }

@@ -40,13 +40,21 @@ namespace QuanLyNhanSu.DAO
             return result;
         }
 
-        public bool Update(BacLuong bacLuong, string maBL)
+        public bool Update(BacLuong bacLuong)
         {
-            string query = $"UPDATE BacLuong " +
-                           $"SET TenBL = N'{bacLuong.TenBL}', HeSBL = {bacLuong.HeSBL} " +
-                           $"WHERE MaBL = '{maBL}'";
-            bool result = _handle.ExecuteNonQuery(query);
-            return result;
+           
+
+            string queryCheck = $"select * from [BacLuong] where MaBL = N'{bacLuong.MaBL}'";
+            DataTable dataTable = _handle.ExecuteQuery(queryCheck);
+            if (dataTable.Rows.Count > 0)
+            {
+                string query = $"UPDATE BacLuong " +
+                            $"SET TenBL = N'{bacLuong.TenBL}', HeSBL = {bacLuong.HeSBL} " +
+                            $"WHERE MaBL = '{bacLuong.MaBL}'";
+                bool result = _handle.ExecuteNonQuery(query);
+                return result;
+            }
+            return false;
         }
 
         public bool Delete(string maBL)

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using QuanLyNhanSu.Model;
 
 namespace QuanLyNhanSu.DAO
@@ -11,6 +13,12 @@ namespace QuanLyNhanSu.DAO
         public UserDAO()
         {
             _handle = new DataHandle();
+        }
+        public bool UserExists(string username,string password)
+        {
+            string query = $"select * from [User] where UserName = N'{username}' and Password = N'{password}'";
+            DataTable dataTable = _handle.ExecuteQuery(query);
+            return dataTable.Rows.Count > 0;
         }
 
         public List<User> Gets(string keyword)
