@@ -3,16 +3,36 @@
 go
 use QLNhanSu
 go
+
+
+--cập nhật thêm thông tin nhân viên: hình ảnh, socccd,ngaycap,noicap, sdt rieng, sdt nhà, tình trạng hôn nhân
 create table NhanVien
 (
     MaNV     varchar(10) primary key,
     TenNV    nvarchar(50) not null,
+	HinhAnh nvarchar(max),
     NgaySinh datetime,
     DiaChi   nvarchar(50),
     GioiTinh int,
+	SoCCCD varchar(30),
+	NgayCap datetime,
+	NoiCap nvarchar(200),
+	SDTRieng varchar(15),
+	SDTNha varchar(15),
+	TinhTrangHonNhan nvarchar(50),
     MaPB     varchar(10)  not null,
     MaTD     varchar(10)  not null,
     MaBL     varchar(10)  not null
+)
+go
+--thêm bảng chấm công
+create table ChamCong(
+	MaCC int identity primary key not null,
+	MaNV varchar(10) not null constraint fk_manv_chamcong foreign key(MaNV) references NhanVien(MaNV),
+	NgayCham datetime,
+	Checkin time,
+	Checkout time,
+	GhiChu nvarchar(max)
 )
 go
 create table TrinhDo
@@ -150,3 +170,4 @@ alter table BaoHiemNhanVien
 go
 alter table BangCong
     add constraint fk_bangcong foreign key (MaNV) references NhanVien (MaNV)
+go
