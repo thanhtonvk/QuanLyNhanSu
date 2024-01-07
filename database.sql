@@ -27,13 +27,14 @@ create table NhanVien
 go
 --thêm bảng chấm công
 create table ChamCong(
-	MaCC int identity primary key not null,
+	MaCC int IDENTITY(1,1) primary key,
 	MaNV varchar(10) not null constraint fk_manv_chamcong foreign key(MaNV) references NhanVien(MaNV),
 	NgayCham datetime,
 	Checkin time,
 	Checkout time,
 	GhiChu nvarchar(max)
 )
+DROP TABLE ChamCong;
 go
 create table TrinhDo
 (
@@ -115,7 +116,6 @@ create table BangCong
 (
     MaNV     varchar(10) not null,
     NgayCong datetime    not null
-
 )
 go
 create table [User]
