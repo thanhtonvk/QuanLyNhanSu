@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@
             this.chếĐộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bảoHiểmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.châmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,8 @@
             this.ngoạiNgữToolStripMenuItem,
             this.chứcVụToolStripMenuItem,
             this.chếĐộToolStripMenuItem,
-            this.bảoHiểmToolStripMenuItem});
+            this.bảoHiểmToolStripMenuItem,
+            this.châmCôngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
@@ -167,6 +170,13 @@
             this.panelContainer.Size = new System.Drawing.Size(1264, 657);
             this.panelContainer.TabIndex = 1;
             // 
+            // châmCôngToolStripMenuItem
+            // 
+            this.châmCôngToolStripMenuItem.Name = "châmCôngToolStripMenuItem";
+            this.châmCôngToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.châmCôngToolStripMenuItem.Text = "Châm công";
+            this.châmCôngToolStripMenuItem.Click += new System.EventHandler(this.châmCôngToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,8 +184,10 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhân viên";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -201,5 +213,6 @@
         private System.Windows.Forms.ToolStripMenuItem bậcLươngToolStripMenuItem;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem châmCôngToolStripMenuItem;
     }
 }

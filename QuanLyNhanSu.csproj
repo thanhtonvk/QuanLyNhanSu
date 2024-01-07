@@ -49,6 +49,7 @@
     <Compile Include="DAO\BacLuongDAO.cs" />
     <Compile Include="DAO\BaoHiemDAO.cs" />
     <Compile Include="DAO\BaoHiemNhanVienDAO.cs" />
+    <Compile Include="DAO\ChamCongDAO.cs" />
     <Compile Include="DAO\CheDo.cs" />
     <Compile Include="DAO\CheDoNhanVienDAO.cs" />
     <Compile Include="DAO\ChucVuDAO.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Model\BangCong.cs" />
     <Compile Include="Model\BaoHiem.cs" />
     <Compile Include="Model\BaoHiemNhanVien.cs" />
+    <Compile Include="Model\ChamCong.cs" />
     <Compile Include="Model\CheDo.cs" />
     <Compile Include="Model\CheDoNhanVien.cs" />
     <Compile Include="Model\ChucVu.cs" />
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="UI\Control\BaoHienNhanVien.Designer.cs">
       <DependentUpon>BaoHienNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Control\ChamCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Control\ChamCong.Designer.cs">
+      <DependentUpon>ChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Control\CheDo.cs">
       <SubType>UserControl</SubType>
@@ -180,6 +188,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Control\BacLuong.resx">
       <DependentUpon>BacLuong.cs</DependentUpon>
@@ -192,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\BaoHienNhanVien.resx">
       <DependentUpon>BaoHienNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Control\ChamCong.resx">
+      <DependentUpon>ChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Control\CheDo.resx">
       <DependentUpon>CheDo.cs</DependentUpon>
@@ -244,6 +256,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="database.sql" />
+    <None Include="Resources\delete %281%29.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\rotation.png" />
+    <None Include="Resources\gallery.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\circular-arrow.png" />
+    <None Include="Resources\add %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

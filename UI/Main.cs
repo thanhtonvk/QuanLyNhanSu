@@ -104,5 +104,11 @@ namespace QuanLyNhanSu.UI
             BaoHienNhanVien control = new BaoHienNhanVien();
             addUserControl(control);
         }
+
+        private void châmCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChamCong control = new ChamCong();
+            addUserControl(control);
+        }
     }
 }
