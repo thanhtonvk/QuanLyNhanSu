@@ -1,9 +1,12 @@
 ﻿using QuanLyNhanSu.DAO;
+using QuanLyNhanSu.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +31,7 @@ namespace QuanLyNhanSu.UI.Control
         private List<Model.NhanVien> nhanVienList = new List<Model.NhanVien>();
 
         private int isNam = 0;
+        private string pathImage = string.Empty;
         public QuanLyNhanVien()
         {
             InitializeComponent();
@@ -79,10 +83,11 @@ namespace QuanLyNhanSu.UI.Control
 
         }
         //Load data vào list view
-        private void OnLoadListView()
+        public void OnLoadListView()
         {
             listPage.Items.Clear();
             nhanVienList = _nhanVienDAO.GetAll();
+
             foreach (var item in nhanVienList)
             {
                 ListViewItem viewItem = listPage.Items.Add(item.MaNV);
@@ -90,6 +95,14 @@ namespace QuanLyNhanSu.UI.Control
                 viewItem.SubItems.Add(item.NgaySinh.ToString());
                 viewItem.SubItems.Add(item.DiaChi);
                 viewItem.SubItems.Add(item.GioiTinh == 0 ? "Nam" : "Nữ");
+
+                viewItem.SubItems.Add(item.SoCCCD);
+                viewItem.SubItems.Add(item.NgayCap.ToString());
+                viewItem.SubItems.Add(item.NoiCap);
+                viewItem.SubItems.Add(item.SDTRieng);
+                viewItem.SubItems.Add(item.SDTNha);
+                viewItem.SubItems.Add(item.TinhTrangHonNhan);
+
                 viewItem.SubItems.Add(item.MaPB);
                 viewItem.SubItems.Add(item.MaTD);
                 viewItem.SubItems.Add(item.MaBL);
@@ -147,9 +160,15 @@ namespace QuanLyNhanSu.UI.Control
                 MessageBox.Show("Không được bỏ trống mã trình độ");
                 return;
             }
+            if (String.IsNullOrWhiteSpace(pathImage))
+            {
+                MessageBox.Show("Hình ảnh không được để trống");
+                return;
+            }
 
             if (_nhanVienDAO.Insert(new Model.NhanVien()
             {
+
                 MaNV = textBoxMaNhanVien.Text,
                 TenNV = textBoxTenNhanVien.Text,
                 NgaySinh = DateTime.Parse(dateTimePickerNgaySinh.Value.ToShortDateString()),
@@ -158,6 +177,13 @@ namespace QuanLyNhanSu.UI.Control
                 MaPB = comboBoxMaPhongBan.Text,
                 MaTD = comboBoxMaTrinhDo.Text,
                 MaBL = comboBoxMaBacLuong.Text,
+                HinhAnh = pathImage,
+                SoCCCD = SoCCCD.Text,
+                NgayCap = DateTime.Parse(NgayCap.Value.ToShortDateString()),
+                NoiCap = NoiCap.Text,
+                SDTRieng = SDTRieng.Text,
+                SDTNha = SDTNha.Text,
+                TinhTrangHonNhan = TinhTrangHonNhan.Text,
             }))
             {
                 OnLoadListView();
@@ -171,6 +197,12 @@ namespace QuanLyNhanSu.UI.Control
                 labelTenPhonBan.Text = "";
                 labelTenTrinhDo.Text = "";
                 labelTenBacLuong.Text = "";
+                SoCCCD.Text = "";
+                TinhTrangHonNhan.Text = "";
+                NoiCap.Text = "";
+                SDTRieng.Text = "";
+                SDTNha.Text = "";
+                imageNv.Image = null;
                 MessageBox.Show("Thêm thành công!");
             }
             else
@@ -225,9 +257,10 @@ namespace QuanLyNhanSu.UI.Control
                 MessageBox.Show("Không được bỏ trống mã trình độ");
                 return;
             }
-
+          
             if (_nhanVienDAO.Update(new Model.NhanVien()
             {
+
                 MaNV = textBoxMaNhanVien.Text,
                 TenNV = textBoxTenNhanVien.Text,
                 NgaySinh = DateTime.Parse(dateTimePickerNgaySinh.Value.ToShortDateString()),
@@ -236,6 +269,13 @@ namespace QuanLyNhanSu.UI.Control
                 MaPB = comboBoxMaPhongBan.Text,
                 MaTD = comboBoxMaTrinhDo.Text,
                 MaBL = comboBoxMaBacLuong.Text,
+                HinhAnh = pathImage,
+                SoCCCD = SoCCCD.Text,
+                NgayCap = DateTime.Parse(NgayCap.Value.ToShortDateString()),
+                NoiCap = NoiCap.Text,
+                SDTRieng = SDTRieng.Text,
+                SDTNha = SDTNha.Text,
+                TinhTrangHonNhan = TinhTrangHonNhan.Text,
             }))
             {
                 OnLoadListView();
@@ -270,6 +310,12 @@ namespace QuanLyNhanSu.UI.Control
                     labelTenPhonBan.Text = "";
                     labelTenTrinhDo.Text = "";
                     labelTenBacLuong.Text = "";
+                    SoCCCD.Text = "";
+                    TinhTrangHonNhan.Text = "";
+                    NoiCap.Text = "";
+                    SDTRieng.Text = "";
+                    SDTNha.Text = "";
+                    imageNv.Image = null;
                     MessageBox.Show("Xóa thành công!");
                 }
                 else
@@ -283,10 +329,14 @@ namespace QuanLyNhanSu.UI.Control
         {
             if (listPage.SelectedItems.Count > 0)
             {
-                textBoxMaNhanVien.Text = listPage.SelectedItems[0].SubItems[0].Text;
-                textBoxTenNhanVien.Text = listPage.SelectedItems[0].SubItems[1].Text;
-                dateTimePickerNgaySinh.Text = listPage.SelectedItems[0].SubItems[2].Text;
-                textBoxDiaChi.Text = listPage.SelectedItems[0].SubItems[3].Text;
+
+                NhanVien nhanVien = _nhanVienDAO.GetNV(listPage.SelectedItems[0].SubItems[0].Text);
+                LoadImageFromByteArray(nhanVien.HinhAnh);
+
+                textBoxMaNhanVien.Text = nhanVien.MaNV;
+                textBoxTenNhanVien.Text = nhanVien.TenNV;
+                dateTimePickerNgaySinh.Text = nhanVien.NgaySinh.ToString();
+                textBoxDiaChi.Text = nhanVien.DiaChi;
                 if (listPage.SelectedItems[0].SubItems[4].Text == "Nam")
                 {
                     radioButton1.Checked = true;
@@ -295,9 +345,17 @@ namespace QuanLyNhanSu.UI.Control
                 {
                     radioButton2.Checked = true;
                 }
-                comboBoxMaPhongBan.Text = listPage.SelectedItems[0].SubItems[5].Text;
-                comboBoxMaTrinhDo.Text = listPage.SelectedItems[0].SubItems[6].Text;
-                comboBoxMaBacLuong.Text = listPage.SelectedItems[0].SubItems[7].Text;
+                comboBoxMaPhongBan.Text = nhanVien.MaPB;
+                comboBoxMaTrinhDo.Text = nhanVien.MaTD;
+                comboBoxMaBacLuong.Text = nhanVien.MaBL;
+
+                SoCCCD.Text = nhanVien.SoCCCD;
+                NoiCap.Text = nhanVien.NoiCap;
+                SDTRieng.Text = nhanVien.SDTRieng;
+                SDTNha.Text = nhanVien.SDTNha;
+                TinhTrangHonNhan.Text = nhanVien.TinhTrangHonNhan;
+                NgayCap.Text = nhanVien.NgayCap.ToString();
+
             }
         }
 
@@ -323,5 +381,43 @@ namespace QuanLyNhanSu.UI.Control
         {
             OnLoadListView();
         }
+
+        private void addImage(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Tệp PNG (*.png)|*.png|Tệp JPG (*.jpg)|*.jpg|Tất cả các tệp (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = openFileDialog.FileName;
+
+                string extension = Path.GetExtension(selectedFilePath).ToLower();
+
+                if (extension == ".png" || extension == ".jpg")
+                {
+                    pathImage = selectedFilePath;
+                    imageNv.Image = new Bitmap(selectedFilePath);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một tệp PNG hoặc JPG hợp lệ.", "Loại Tệp Không Hợp Lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+
+        private void LoadImageFromByteArray(string imagpath)
+        {
+            try
+            {
+                System.Drawing.Image loadedImage = System.Drawing.Image.FromFile(imagpath);
+                imageNv.Image = loadedImage;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải hình ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
