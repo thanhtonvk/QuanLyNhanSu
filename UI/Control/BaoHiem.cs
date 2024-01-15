@@ -135,5 +135,91 @@ namespace QuanLyNhanSu.UI.Control
                 viewItem.SubItems.Add(item.TenBH);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã bảo hiểm");
+            }
+
+            if (String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                MessageBox.Show("Không được bỏ trống tên bảo hiểm");
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text) && !String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                if (_dao.Insert(new Model.BaoHiem()
+                {
+                    MaBH = textBoxMa.Text,
+                    TenBH = textBoxTen.Text,
+                }))
+                {
+                    OnLoadListView();
+                    textBoxMa.Text = "";
+                    textBoxTen.Text = "";
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công!");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã bảo hiểm");
+            }
+
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                if (_dao.Delete(textBoxMa.Text))
+                {
+                    OnLoadListView();
+                    textBoxMa.Text = "";
+                    textBoxTen.Text = "";
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã bảo hiểm");
+            }
+
+            if (String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                MessageBox.Show("Không được bỏ trống tên bảo hiểm");
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text) && !String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                if (_dao.Update(new Model.BaoHiem()
+                {
+                    MaBH = textBoxMa.Text,
+                    TenBH = textBoxTen.Text,
+                }))
+                {
+                    OnLoadListView();
+                    MessageBox.Show("Cập nhật thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật không thành công!");
+                }
+            }
+        }
     }
 }

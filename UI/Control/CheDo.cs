@@ -22,6 +22,51 @@ namespace QuanLyNhanSu.UI.Control
 
         private void add_Click(object sender, EventArgs e)
         {
+         
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void listPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listPage.SelectedItems.Count > 0)
+            {
+                textBoxMa.Text = listPage.SelectedItems[0].SubItems[0].Text;
+                textBoxTen.Text = listPage.SelectedItems[0].SubItems[1].Text;
+            }
+        }
+
+        private void CheDo_Load(object sender, EventArgs e)
+        {
+            listPage.Columns[0].Width = (int)(listPage.Width * 0.25);
+            listPage.Columns[1].Width = (int)(listPage.Width * 0.25);
+            listPage.View = View.Details;
+            listPage.GridLines = true;
+            listPage.FullRowSelect = true;
+            OnLoadListView();
+        }
+        //Load data vào list view
+        private void OnLoadListView()
+        {
+            listPage.Items.Clear();
+            list = _dao.GetAll();
+            foreach (var item in list)
+            {
+                ListViewItem viewItem = listPage.Items.Add(item.MaCD);
+                viewItem.SubItems.Add(item.TenCD);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
                 MessageBox.Show("Không được bỏ trống mã chế độ");
@@ -52,7 +97,7 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void update_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
@@ -82,7 +127,7 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
@@ -103,36 +148,6 @@ namespace QuanLyNhanSu.UI.Control
                 {
                     MessageBox.Show("Xóa không thành công!");
                 }
-            }
-        }
-
-        private void listPage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listPage.SelectedItems.Count > 0)
-            {
-                textBoxMa.Text = listPage.SelectedItems[0].SubItems[0].Text;
-                textBoxTen.Text = listPage.SelectedItems[0].SubItems[1].Text;
-            }
-        }
-
-        private void CheDo_Load(object sender, EventArgs e)
-        {
-            listPage.Columns[0].Width = (int)(listPage.Width * 0.25);
-            listPage.Columns[1].Width = (int)(listPage.Width * 0.25);
-            listPage.View = View.Details;
-            listPage.GridLines = true;
-            listPage.FullRowSelect = true;
-            OnLoadListView();
-        }
-        //Load data vào list view
-        private void OnLoadListView()
-        {
-            listPage.Items.Clear();
-            list = _dao.GetAll();
-            foreach (var item in list)
-            {
-                ListViewItem viewItem = listPage.Items.Add(item.MaCD);
-                viewItem.SubItems.Add(item.TenCD);
             }
         }
     }

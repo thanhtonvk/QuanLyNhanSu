@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonLamMoi = new System.Windows.Forms.Button();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayCC = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.update = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ghichu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,11 +44,16 @@
             this.panelPhongBan = new System.Windows.Forms.Panel();
             this.textBoxMaNhanVien = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.textGioVao = new System.Windows.Forms.TextBox();
-            this.textGioRa = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textGhiChu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.textGioRa = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textGioVao = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panelPhongBan.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -66,29 +66,12 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Giờ vào";
             // 
-            // buttonLamMoi
-            // 
-            this.buttonLamMoi.Location = new System.Drawing.Point(718, 101);
-            this.buttonLamMoi.Name = "buttonLamMoi";
-            this.buttonLamMoi.Size = new System.Drawing.Size(75, 23);
-            this.buttonLamMoi.TabIndex = 28;
-            this.buttonLamMoi.Text = "Làm mới";
-            this.buttonLamMoi.UseVisualStyleBackColor = true;
-            // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.Location = new System.Drawing.Point(637, 101);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.buttonTimKiem.TabIndex = 27;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.UseVisualStyleBackColor = true;
-            // 
             // textBoxTimKiem
             // 
-            this.textBoxTimKiem.Location = new System.Drawing.Point(274, 103);
+            this.textBoxTimKiem.Location = new System.Drawing.Point(274, 90);
+            this.textBoxTimKiem.Multiline = true;
             this.textBoxTimKiem.Name = "textBoxTimKiem";
-            this.textBoxTimKiem.Size = new System.Drawing.Size(346, 20);
+            this.textBoxTimKiem.Size = new System.Drawing.Size(346, 40);
             this.textBoxTimKiem.TabIndex = 26;
             // 
             // dateTimePickerNgayCC
@@ -105,35 +88,6 @@
             this.label8.Size = new System.Drawing.Size(102, 19);
             this.label8.TabIndex = 20;
             this.label8.Text = "Ngày chấm công";
-            // 
-            // update
-            // 
-            this.update.Location = new System.Drawing.Point(94, 100);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(75, 23);
-            this.update.TabIndex = 11;
-            this.update.Text = "Cập nhật";
-            this.update.UseVisualStyleBackColor = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
-            // 
-            // delete
-            // 
-            this.delete.Location = new System.Drawing.Point(184, 100);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(75, 23);
-            this.delete.TabIndex = 10;
-            this.delete.Text = "Xóa ";
-            this.delete.UseVisualStyleBackColor = true;
-            // 
-            // add
-            // 
-            this.add.Location = new System.Drawing.Point(13, 100);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 23);
-            this.add.TabIndex = 9;
-            this.add.Text = "Thêm";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // label1
             // 
@@ -227,20 +181,20 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.button3);
+            this.panelMenu.Controls.Add(this.button4);
+            this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.textGhiChu);
             this.panelMenu.Controls.Add(this.label5);
             this.panelMenu.Controls.Add(this.textGioRa);
             this.panelMenu.Controls.Add(this.label3);
             this.panelMenu.Controls.Add(this.textGioVao);
             this.panelMenu.Controls.Add(this.label4);
-            this.panelMenu.Controls.Add(this.buttonLamMoi);
-            this.panelMenu.Controls.Add(this.buttonTimKiem);
             this.panelMenu.Controls.Add(this.textBoxTimKiem);
             this.panelMenu.Controls.Add(this.dateTimePickerNgayCC);
             this.panelMenu.Controls.Add(this.label8);
-            this.panelMenu.Controls.Add(this.update);
-            this.panelMenu.Controls.Add(this.delete);
-            this.panelMenu.Controls.Add(this.add);
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.textBoxMaNhanVien);
             this.panelMenu.Controls.Add(this.label2);
@@ -250,12 +204,20 @@
             this.panelMenu.Size = new System.Drawing.Size(1264, 132);
             this.panelMenu.TabIndex = 7;
             // 
-            // textGioVao
+            // textGhiChu
             // 
-            this.textGioVao.Location = new System.Drawing.Point(100, 68);
-            this.textGioVao.Name = "textGioVao";
-            this.textGioVao.Size = new System.Drawing.Size(165, 20);
-            this.textGioVao.TabIndex = 30;
+            this.textGhiChu.Location = new System.Drawing.Point(672, 37);
+            this.textGhiChu.Name = "textGhiChu";
+            this.textGhiChu.Size = new System.Drawing.Size(165, 20);
+            this.textGhiChu.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(618, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 19);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Ghi chú ";
             // 
             // textGioRa
             // 
@@ -272,20 +234,76 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Giờ ra";
             // 
-            // textGhiChu
+            // textGioVao
             // 
-            this.textGhiChu.Location = new System.Drawing.Point(672, 37);
-            this.textGhiChu.Name = "textGhiChu";
-            this.textGhiChu.Size = new System.Drawing.Size(165, 20);
-            this.textGhiChu.TabIndex = 34;
+            this.textGioVao.Location = new System.Drawing.Point(100, 68);
+            this.textGioVao.Name = "textGioVao";
+            this.textGioVao.Size = new System.Drawing.Size(165, 20);
+            this.textGioVao.TabIndex = 30;
             // 
-            // label5
+            // button1
             // 
-            this.label5.Location = new System.Drawing.Point(618, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 19);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Ghi chú ";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.Image = global::QuanLyNhanSu.Properties.Resources.rotation;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(100, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 41);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Cập nhật";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.Image = global::QuanLyNhanSu.Properties.Resources.delete;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(201, 89);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 43);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "Xóa ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button3.Image = global::QuanLyNhanSu.Properties.Resources.add__1_;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(-1, 89);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 41);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "Thêm";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = global::QuanLyNhanSu.Properties.Resources.circular_arrow;
+            this.button4.Location = new System.Drawing.Point(675, 92);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(42, 38);
+            this.button4.TabIndex = 41;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Image = global::QuanLyNhanSu.Properties.Resources.search;
+            this.button5.Location = new System.Drawing.Point(626, 92);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(43, 38);
+            this.button5.TabIndex = 40;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // ChamCong
             // 
@@ -305,14 +323,9 @@
 
         #endregion
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button buttonLamMoi;
-        private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.TextBox textBoxTimKiem;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayCC;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.Button add;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader ghichu;
@@ -330,5 +343,10 @@
         private System.Windows.Forms.TextBox textGioRa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textGioVao;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
