@@ -34,7 +34,6 @@ create table ChamCong(
 	Checkout time,
 	GhiChu nvarchar(max)
 )
-DROP TABLE ChamCong;
 go
 create table TrinhDo
 (
