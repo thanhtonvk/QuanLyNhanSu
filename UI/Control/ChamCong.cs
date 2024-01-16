@@ -254,19 +254,17 @@ namespace QuanLyNhanSu.UI.Control
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+       
+            if (_dao.Delete(maCC))
+            {
+                OnLoadListView();
+                MessageBox.Show("Cập nhật thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật không thành công!");
+            }
         }
-
-        private void buttonTimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonLamMoi_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             listPage.Items.Clear();

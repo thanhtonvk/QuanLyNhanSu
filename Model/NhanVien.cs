@@ -8,6 +8,7 @@ namespace QuanLyNhanSu.Model
 {
     internal class NhanVien
     {
+        public static string ConstMaNV;
         public string MaNV { get; set; }
         public string TenNV { get; set; }
         public string HinhAnh { get; set; }

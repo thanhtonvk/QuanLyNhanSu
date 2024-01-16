@@ -10,7 +10,7 @@ namespace QuanLyNhanSu
         {
         }
 
-        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=QLNhanSu;Integrated Security=True;";
+        string connectionString = "Server=DESKTOP-M78PVOG\\SQLEXPRESS;Database=QLNhanSu;Integrated Security=True;";
 
 
         // Hàm để thêm, sửa, xóa dữ liệu

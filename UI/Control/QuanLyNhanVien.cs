@@ -419,5 +419,20 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nhân viên");
+                return;
+            }
+            else
+            {
+ 
+                NhanVien.ConstMaNV = textBoxMaNhanVien.Text;
+                BangLuong bangLuong = new BangLuong();
+                bangLuong.ShowDialog();
+            }
+        }
     }
 }

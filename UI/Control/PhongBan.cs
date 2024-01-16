@@ -18,34 +18,7 @@ namespace QuanLyNhanSu.UI.Control
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã phòng ban");
-            }
-
-            if (String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
-            {
-                MessageBox.Show("Không được bỏ trống tên phòng ban");
-            }
-
-            if (!String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text) && !String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
-            {
-                if (_phongBanDAO.Insert(new Model.PhongBan()
-                {
-                    MaPB = textBoxMaPhongBan.Text,
-                    TenPB = textBoxTenPhongBan.Text,
-                }))
-                {
-                    OnLoadListView();
-                    textBoxMaPhongBan.Text = "";
-                    textBoxTenPhongBan.Text = "";
-                    MessageBox.Show("Thêm thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm không thành công!");
-                }
-            }
+          
         }
 
         private void listPage_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,56 +54,12 @@ namespace QuanLyNhanSu.UI.Control
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã phòng ban");
-            }
-
-            if (String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
-            {
-                MessageBox.Show("Không được bỏ trống tên phòng ban");
-            }
-
-            if (!String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text) && !String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
-            {
-                if (_phongBanDAO.Update(new Model.PhongBan()
-                {
-                    MaPB = textBoxMaPhongBan.Text,
-                    TenPB = textBoxTenPhongBan.Text,
-                }))
-                {
-                    OnLoadListView();
-                    MessageBox.Show("Cập nhật thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật không thành công!");
-                }
-            }
+           
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã phòng ban");
-            }
-
-
-            if (!String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text) )
-            {
-                if (_phongBanDAO.Delete(textBoxMaPhongBan.Text))
-                {
-                    OnLoadListView();
-                    textBoxMaPhongBan.Text = "";
-                    textBoxTenPhongBan.Text = "";
-                    MessageBox.Show("Xóa thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa không thành công!");
-                }
-            }
+           
         }
 
         private void textBoxMaPhongBan_TextChanged(object sender, EventArgs e)
@@ -161,6 +90,92 @@ namespace QuanLyNhanSu.UI.Control
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã phòng ban");
+            }
+
+            if (String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
+            {
+                MessageBox.Show("Không được bỏ trống tên phòng ban");
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text) && !String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
+            {
+                if (_phongBanDAO.Insert(new Model.PhongBan()
+                {
+                    MaPB = textBoxMaPhongBan.Text,
+                    TenPB = textBoxTenPhongBan.Text,
+                }))
+                {
+                    OnLoadListView();
+                    textBoxMaPhongBan.Text = "";
+                    textBoxTenPhongBan.Text = "";
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công!");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã phòng ban");
+            }
+
+
+            if (!String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
+            {
+                if (_phongBanDAO.Delete(textBoxMaPhongBan.Text))
+                {
+                    OnLoadListView();
+                    textBoxMaPhongBan.Text = "";
+                    textBoxTenPhongBan.Text = "";
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã phòng ban");
+            }
+
+            if (String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
+            {
+                MessageBox.Show("Không được bỏ trống tên phòng ban");
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMaPhongBan.Text) && !String.IsNullOrWhiteSpace(textBoxTenPhongBan.Text))
+            {
+                if (_phongBanDAO.Update(new Model.PhongBan()
+                {
+                    MaPB = textBoxMaPhongBan.Text,
+                    TenPB = textBoxTenPhongBan.Text,
+                }))
+                {
+                    OnLoadListView();
+                    MessageBox.Show("Cập nhật thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật không thành công!");
+                }
+            }
         }
     }
 }

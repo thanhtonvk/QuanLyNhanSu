@@ -16,88 +16,17 @@ namespace QuanLyNhanSu.UI.Control
 
         private void add_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã chức vụ");
-            }
-
-            if (String.IsNullOrWhiteSpace(textBoxTen.Text))
-            {
-                MessageBox.Show("Không được bỏ trống tên chức vụ");
-            }
-
-            if (!String.IsNullOrWhiteSpace(textBoxMa.Text) && !String.IsNullOrWhiteSpace(textBoxTen.Text))
-            {
-                if (_dao.Insert(new Model.ChucVu()
-                {
-                    MaCV = textBoxMa.Text,
-                    TenCV = textBoxTen.Text,
-                }))
-                {
-                    OnLoadListView();
-                    textBoxMa.Text = "";
-                    textBoxTen.Text = "";
-                    MessageBox.Show("Thêm thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm không thành công!");
-                }
-            }
+          
         }
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã chức vụ");
-            }
-
-            if (String.IsNullOrWhiteSpace(textBoxTen.Text))
-            {
-                MessageBox.Show("Không được bỏ trống tên chức vụ");
-            }
-
-            if (!String.IsNullOrWhiteSpace(textBoxMa.Text) && !String.IsNullOrWhiteSpace(textBoxTen.Text))
-            {
-                if (_dao.Update(new Model.ChucVu()
-                {
-                    MaCV = textBoxMa.Text,
-                    TenCV = textBoxTen.Text,
-                }))
-                {
-                    OnLoadListView();
-                    MessageBox.Show("Cập nhật thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật không thành công!");
-                }
-            }
+           
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã chức vụ");
-            }
-
-
-            if (!String.IsNullOrWhiteSpace(textBoxMa.Text))
-            {
-                if (_dao.Delete(textBoxMa.Text))
-                {
-                    OnLoadListView();
-                    textBoxMa.Text = "";
-                    textBoxTen.Text = "";
-                    MessageBox.Show("Xóa thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa không thành công!");
-                }
-            }
+           
         }
 
         private void ChucVu_Load(object sender, EventArgs e)
@@ -162,6 +91,92 @@ namespace QuanLyNhanSu.UI.Control
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã chức vụ");
+            }
+
+            if (String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                MessageBox.Show("Không được bỏ trống tên chức vụ");
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text) && !String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                if (_dao.Insert(new Model.ChucVu()
+                {
+                    MaCV = textBoxMa.Text,
+                    TenCV = textBoxTen.Text,
+                }))
+                {
+                    OnLoadListView();
+                    textBoxMa.Text = "";
+                    textBoxTen.Text = "";
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công!");
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã chức vụ");
+            }
+
+            if (String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                MessageBox.Show("Không được bỏ trống tên chức vụ");
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text) && !String.IsNullOrWhiteSpace(textBoxTen.Text))
+            {
+                if (_dao.Update(new Model.ChucVu()
+                {
+                    MaCV = textBoxMa.Text,
+                    TenCV = textBoxTen.Text,
+                }))
+                {
+                    OnLoadListView();
+                    MessageBox.Show("Cập nhật thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật không thành công!");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã chức vụ");
+            }
+
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                if (_dao.Delete(textBoxMa.Text))
+                {
+                    OnLoadListView();
+                    textBoxMa.Text = "";
+                    textBoxTen.Text = "";
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
+            }
         }
     }
 }

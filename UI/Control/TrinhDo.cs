@@ -43,6 +43,30 @@ namespace QuanLyNhanSu.UI.Control
 
         private void add_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void listPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listPage.SelectedItems.Count > 0)
+            {
+                textBoxMa.Text = listPage.SelectedItems[0].SubItems[0].Text;
+                textBoxTen.Text = listPage.SelectedItems[0].SubItems[1].Text;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
                 MessageBox.Show("Không được bỏ trống mã trình độ");
@@ -73,7 +97,7 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void update_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
@@ -103,7 +127,7 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
@@ -124,15 +148,6 @@ namespace QuanLyNhanSu.UI.Control
                 {
                     MessageBox.Show("Xóa không thành công!");
                 }
-            }
-        }
-
-        private void listPage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listPage.SelectedItems.Count > 0)
-            {
-                textBoxMa.Text = listPage.SelectedItems[0].SubItems[0].Text;
-                textBoxTen.Text = listPage.SelectedItems[0].SubItems[1].Text;
             }
         }
     }

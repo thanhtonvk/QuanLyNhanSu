@@ -138,6 +138,21 @@ namespace QuanLyNhanSu.UI.Control
 
         private void button3_Click(object sender, EventArgs e)
         {
+         
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void add_Click_1(object sender, EventArgs e)
+        {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
                 MessageBox.Show("Không được bỏ trống mã bảo hiểm");
@@ -168,31 +183,7 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã bảo hiểm");
-            }
-
-
-            if (!String.IsNullOrWhiteSpace(textBoxMa.Text))
-            {
-                if (_dao.Delete(textBoxMa.Text))
-                {
-                    OnLoadListView();
-                    textBoxMa.Text = "";
-                    textBoxTen.Text = "";
-                    MessageBox.Show("Xóa thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa không thành công!");
-                }
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void update_Click_1(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(textBoxMa.Text))
             {
@@ -218,6 +209,30 @@ namespace QuanLyNhanSu.UI.Control
                 else
                 {
                     MessageBox.Show("Cập nhật không thành công!");
+                }
+            }
+        }
+
+        private void delete_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã bảo hiểm");
+            }
+
+
+            if (!String.IsNullOrWhiteSpace(textBoxMa.Text))
+            {
+                if (_dao.Delete(textBoxMa.Text))
+                {
+                    OnLoadListView();
+                    textBoxMa.Text = "";
+                    textBoxTen.Text = "";
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!");
                 }
             }
         }

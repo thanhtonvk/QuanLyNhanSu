@@ -16,6 +16,11 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             if (String.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Không được bỏ trống tên");
@@ -35,12 +40,12 @@ namespace QuanLyNhanSu
                 !String.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 if (_userDao.Insert(new User()
-                    {
-                        HoTen = txtName.Text,
-                        Password = txtPassword.Text,
-                        Quyen = "",
-                        UserName = txtUsername.Text
-                    }))
+                {
+                    HoTen = txtName.Text,
+                    Password = txtPassword.Text,
+                    Quyen = "",
+                    UserName = txtUsername.Text
+                }))
                 {
                     MessageBox.Show("Đăng ký tài khoản thành công");
                 }

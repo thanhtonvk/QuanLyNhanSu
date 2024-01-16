@@ -25,104 +25,17 @@ namespace QuanLyNhanSu.UI.Control
 
         private void add_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã nhân viên");
-                return;
-            }
-
-            if (String.IsNullOrWhiteSpace(comboBoxMaBaoHiem.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã bảo hiêm");
-                return;
-            }
-            if (String.IsNullOrWhiteSpace(textBoxNoiCap.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã nơi cấp");
-                return;
-            }
-
-            if (_baoHiemNhanVienDAO.Insert(new Model.BaoHiemNhanVien()
-            {
-                MaNV = textBoxMaNhanVien.Text,
-                MaBH = comboBoxMaBaoHiem.Text,
-                NoiCap = textBoxNoiCap.Text,
-                GhiChu = textBoxGhichu.Text,
-                NgayBD = DateTime.Parse(dateTimePickerNgayBd.Value.ToShortDateString()),
-                NgayKT = DateTime.Parse(dateTimePickerNgayKt.Value.ToShortDateString()),
-            }))
-            {
-                OnLoadListView();
-                textBoxMaNhanVien.Text = "";
-                comboBoxMaBaoHiem.Text = "";
-                MessageBox.Show("Thêm thành công!");
-            }
-            else
-            {
-                MessageBox.Show("Thêm không thành công!");
-            }
+            
         }
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã nhân viên");
-                return;
-            }
-
-            if (String.IsNullOrWhiteSpace(comboBoxMaBaoHiem.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã bảo hiêm");
-                return;
-            }
-            if (String.IsNullOrWhiteSpace(textBoxNoiCap.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã nơi cấp");
-                return;
-            }
-
-            if (_baoHiemNhanVienDAO.Update(new Model.BaoHiemNhanVien()
-            {
-                MaNV = textBoxMaNhanVien.Text,
-                MaBH = comboBoxMaBaoHiem.Text,
-                NoiCap = textBoxNoiCap.Text,
-                GhiChu = textBoxGhichu.Text,
-                NgayBD = DateTime.Parse(dateTimePickerNgayBd.Value.ToShortDateString()),
-                NgayKT = DateTime.Parse(dateTimePickerNgayKt.Value.ToShortDateString()),
-            }))
-            {
-                OnLoadListView();
-                MessageBox.Show("Cập nhật thành công!");
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật không thành công!");
-            }
+           
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã nhân viên");
-                return;
-            }
-
-            if (!String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
-            {
-                if (_baoHiemNhanVienDAO.Delete(textBoxMaNhanVien.Text, comboBoxMaBaoHiem.Text))
-                {
-                    OnLoadListView();
-                    textBoxMaNhanVien.Text = "";
-                    comboBoxMaBaoHiem.Text = "";
-                    MessageBox.Show("Xóa thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa không thành công!");
-                }
-            }
+           
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
@@ -192,6 +105,108 @@ namespace QuanLyNhanSu.UI.Control
                 viewItem.SubItems.Add(item.NgayKT.ToString());
                 viewItem.SubItems.Add(item.NoiCap);
                 viewItem.SubItems.Add(item.GhiChu);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nhân viên");
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(comboBoxMaBaoHiem.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã bảo hiêm");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(textBoxNoiCap.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nơi cấp");
+                return;
+            }
+
+            if (_baoHiemNhanVienDAO.Insert(new Model.BaoHiemNhanVien()
+            {
+                MaNV = textBoxMaNhanVien.Text,
+                MaBH = comboBoxMaBaoHiem.Text,
+                NoiCap = textBoxNoiCap.Text,
+                GhiChu = textBoxGhichu.Text,
+                NgayBD = DateTime.Parse(dateTimePickerNgayBd.Value.ToShortDateString()),
+                NgayKT = DateTime.Parse(dateTimePickerNgayKt.Value.ToShortDateString()),
+            }))
+            {
+                OnLoadListView();
+                textBoxMaNhanVien.Text = "";
+                comboBoxMaBaoHiem.Text = "";
+                MessageBox.Show("Thêm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm không thành công!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nhân viên");
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(comboBoxMaBaoHiem.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã bảo hiêm");
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(textBoxNoiCap.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nơi cấp");
+                return;
+            }
+
+            if (_baoHiemNhanVienDAO.Update(new Model.BaoHiemNhanVien()
+            {
+                MaNV = textBoxMaNhanVien.Text,
+                MaBH = comboBoxMaBaoHiem.Text,
+                NoiCap = textBoxNoiCap.Text,
+                GhiChu = textBoxGhichu.Text,
+                NgayBD = DateTime.Parse(dateTimePickerNgayBd.Value.ToShortDateString()),
+                NgayKT = DateTime.Parse(dateTimePickerNgayKt.Value.ToShortDateString()),
+            }))
+            {
+                OnLoadListView();
+                MessageBox.Show("Cập nhật thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật không thành công!");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nhân viên");
+                return;
+            }
+
+            if (!String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
+            {
+                if (_baoHiemNhanVienDAO.Delete(textBoxMaNhanVien.Text, comboBoxMaBaoHiem.Text))
+                {
+                    OnLoadListView();
+                    textBoxMaNhanVien.Text = "";
+                    comboBoxMaBaoHiem.Text = "";
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
             }
         }
     }

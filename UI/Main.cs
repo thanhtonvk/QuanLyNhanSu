@@ -35,8 +35,7 @@ namespace QuanLyNhanSu.UI
 
         private void bảngCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BangCong control = new BangCong();
-            addUserControl(control);
+     
         }
 
         private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)

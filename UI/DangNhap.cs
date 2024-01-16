@@ -45,9 +45,9 @@ namespace QuanLyNhanSu
                 if (_userDao.UserExists(txtUsername.Text, txtPassword.Text))
                 {
                     this.Hide();
-                    Main main = new Main();
-                    main.Show();
-                    MessageBox.Show("Đăng nhập thành công");
+                    Start start = new Start();
+                    start.Show();
+
 
                 }
                 else

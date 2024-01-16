@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChucVu));
             this.listPage = new System.Windows.Forms.ListView();
             this.Ma = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.update = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelPhongBan = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelPhongBan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listPage
@@ -75,9 +78,10 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.update);
-            this.panelMenu.Controls.Add(this.delete);
-            this.panelMenu.Controls.Add(this.add);
+            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.label3);
             this.panelMenu.Controls.Add(this.textBoxTen);
             this.panelMenu.Controls.Add(this.label1);
@@ -89,36 +93,6 @@
             this.panelMenu.Size = new System.Drawing.Size(1264, 100);
             this.panelMenu.TabIndex = 5;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
-            // 
-            // update
-            // 
-            this.update.Location = new System.Drawing.Point(299, 69);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(75, 23);
-            this.update.TabIndex = 11;
-            this.update.Text = "Cập nhật";
-            this.update.UseVisualStyleBackColor = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
-            // 
-            // delete
-            // 
-            this.delete.Location = new System.Drawing.Point(402, 37);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(75, 23);
-            this.delete.TabIndex = 10;
-            this.delete.Text = "Xóa ";
-            this.delete.UseVisualStyleBackColor = true;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            // 
-            // add
-            // 
-            this.add.Location = new System.Drawing.Point(299, 37);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 23);
-            this.add.TabIndex = 9;
-            this.add.Text = "Thêm";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // label3
             // 
@@ -177,6 +151,59 @@
             this.panelPhongBan.TabIndex = 4;
             this.panelPhongBan.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPhongBan_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.Image = global::QuanLyNhanSu.Properties.Resources.rotation;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(401, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 34);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Cập nhật";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.Image = global::QuanLyNhanSu.Properties.Resources.delete;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(502, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 34);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Xóa ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button3.Image = global::QuanLyNhanSu.Properties.Resources.add__1_;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(300, 61);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 34);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Thêm";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(1144, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // ChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +216,7 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panelPhongBan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,14 +227,15 @@
         private System.Windows.Forms.ColumnHeader Ma;
         private System.Windows.Forms.ColumnHeader Ten;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.Button add;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelPhongBan;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

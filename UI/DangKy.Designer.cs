@@ -39,7 +39,7 @@ namespace QuanLyNhanSu
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -98,15 +98,19 @@ namespace QuanLyNhanSu
             this.label4.TabIndex = 9;
             this.label4.Text = "Tên người dùng";
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(254, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Đăng ký";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(247, 195);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 27);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Đăng ký";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DangKy
             // 
@@ -114,7 +118,7 @@ namespace QuanLyNhanSu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(423, 262);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPassword);
@@ -131,8 +135,6 @@ namespace QuanLyNhanSu
 
         }
 
-        private System.Windows.Forms.Button button1;
-
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
 
@@ -144,5 +146,7 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Label label1;
 
         #endregion
+
+        private System.Windows.Forms.Button button2;
     }
 }

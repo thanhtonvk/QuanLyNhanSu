@@ -40,7 +40,7 @@ namespace QuanLyNhanSu.DAO
         {
             List<BaoHiemNhanVien> baoHiemNhanViens = new List<BaoHiemNhanVien>();
             string query =
-                "SELECT NhanVien.MaNV,NhanVien.TenNV,BaoHiemNhanVien.MABH, NGAYBD, NGAYKT, NOICAP, GHICHU,TENBH FROM BaoHiemNhanVien,BaoHiem,NhanVien where BaoHiem.MaBH = BaoHiemNhanVien.MaBH and BaoHiemNhanVien.MaNV = NhanVien.MaNV";
+                "SELECT NhanVien.MaNV,NhanVien.TenNV,BaoHiemNhanVien.MABH, NGAYBD, NGAYKT,  NhanVien.NOICAP, GHICHU,TENBH FROM BaoHiemNhanVien,BaoHiem,NhanVien where BaoHiem.MaBH = BaoHiemNhanVien.MaBH and BaoHiemNhanVien.MaNV = NhanVien.MaNV";
             DataTable dataTable = _handle.ExecuteQuery(query);
             foreach (DataRow row in dataTable.Rows)
             {

@@ -29,36 +29,7 @@ namespace QuanLyNhanSu.UI.Control
 
         private void add_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã nhân viên");
-                return;
-            }
-
-            if (String.IsNullOrWhiteSpace(comboBoxMaChucVu.Text))
-            {
-                MessageBox.Show("Không được bỏ trống mã chúc vụ");
-                return;
-            }
-
-
-            if (_chucVuNhanVienDAO.Insert(new Model.ChucVuNhanVien()
-            {
-                MaNV = textBoxMaNhanVien.Text,
-                NgayBD = DateTime.Parse(dateTimePickerNgayBd.Value.ToShortDateString()),
-                NgayKT = DateTime.Parse(dateTimePickerNgayKt.Value.ToShortDateString()),
-                MaCV = comboBoxMaChucVu.Text,
-            }))
-            {
-                OnLoadListView();
-                textBoxMaNhanVien.Text = "";
-                comboBoxMaChucVu.Text = "";
-                MessageBox.Show("Thêm thành công!");
-            }
-            else
-            {
-                MessageBox.Show("Thêm không thành công!");
-            }
+          
         }
 
         private void ChucVuNhanVien_Load(object sender, EventArgs e)
@@ -94,6 +65,76 @@ namespace QuanLyNhanSu.UI.Control
         }
         private void update_Click(object sender, EventArgs e)
         {
+         
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonLamMoi_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void comboBoxMaChucVu_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void listPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listPage.SelectedItems.Count > 0)
+            {
+                textBoxMaNhanVien.Text = listPage.SelectedItems[0].SubItems[0].Text;
+                comboBoxMaChucVu.Text = listPage.SelectedItems[0].SubItems[2].Text;
+                dateTimePickerNgayBd.Text = listPage.SelectedItems[0].SubItems[4].Text;
+                dateTimePickerNgayKt.Text = listPage.SelectedItems[0].SubItems[5].Text;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã nhân viên");
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(comboBoxMaChucVu.Text))
+            {
+                MessageBox.Show("Không được bỏ trống mã chúc vụ");
+                return;
+            }
+
+
+            if (_chucVuNhanVienDAO.Insert(new Model.ChucVuNhanVien()
+            {
+                MaNV = textBoxMaNhanVien.Text,
+                NgayBD = DateTime.Parse(dateTimePickerNgayBd.Value.ToShortDateString()),
+                NgayKT = DateTime.Parse(dateTimePickerNgayKt.Value.ToShortDateString()),
+                MaCV = comboBoxMaChucVu.Text,
+            }))
+            {
+                OnLoadListView();
+                textBoxMaNhanVien.Text = "";
+                comboBoxMaChucVu.Text = "";
+                MessageBox.Show("Thêm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm không thành công!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
             {
                 MessageBox.Show("Không được bỏ trống mã nhân viên");
@@ -124,7 +165,7 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(textBoxMaNhanVien.Text))
             {
@@ -148,7 +189,12 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void buttonTimKiem_Click(object sender, EventArgs e)
+        private void textBoxTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             chucVuNhanList.Clear();
             listPage.Items.Clear();
@@ -164,25 +210,9 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void buttonLamMoi_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             OnLoadListView();
-        }
-
-        private void comboBoxMaChucVu_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void listPage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listPage.SelectedItems.Count > 0)
-            {
-                textBoxMaNhanVien.Text = listPage.SelectedItems[0].SubItems[0].Text;
-                comboBoxMaChucVu.Text = listPage.SelectedItems[0].SubItems[2].Text;
-                dateTimePickerNgayBd.Text = listPage.SelectedItems[0].SubItems[4].Text;
-                dateTimePickerNgayKt.Text = listPage.SelectedItems[0].SubItems[5].Text;
-            }
         }
     }
 }
