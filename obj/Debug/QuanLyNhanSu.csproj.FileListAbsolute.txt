@@ -7,7 +7,6 @@ D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResou
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.SuggestedBindingRedirects.cache
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.DangNhap.resources
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.DangKy.resources
 D:\DoAn\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
@@ -61,3 +60,19 @@ E:\Winfom\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
 E:\Winfom\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 E:\Winfom\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
 E:\Winfom\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.ChamCong.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.BacLuong.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.BaoHiem.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.BaoHienNhanVien.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.ChamCong.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.CheDo.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.CheDoNhanVien.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.ChucVu.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.ChucVuNhanVien.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.NgoaiNgu.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.NgoaiNguNhanVien.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.PhongBan.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.QuanLyNhanVien.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.TrinhDo.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Main.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Start.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.BangLuong.resources

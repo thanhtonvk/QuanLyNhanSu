@@ -60,7 +60,7 @@
             // ngaythang
             // 
             this.ngaythang.AutoSize = true;
-            this.ngaythang.Location = new System.Drawing.Point(453, 94);
+            this.ngaythang.Location = new System.Drawing.Point(412, 95);
             this.ngaythang.Name = "ngaythang";
             this.ngaythang.Size = new System.Drawing.Size(35, 13);
             this.ngaythang.TabIndex = 57;
@@ -274,7 +274,7 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
