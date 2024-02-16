@@ -52,16 +52,6 @@ namespace QuanLyNhanSu.UI.Control
             }
         }
 
-        private void update_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void delete_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void textBoxMaPhongBan_TextChanged(object sender, EventArgs e)
         {
 

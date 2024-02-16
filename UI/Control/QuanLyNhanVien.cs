@@ -434,5 +434,10 @@ namespace QuanLyNhanSu.UI.Control
                 bangLuong.ShowDialog();
             }
         }
+
+        private void imageNv_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

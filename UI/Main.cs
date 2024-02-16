@@ -109,5 +109,88 @@ namespace QuanLyNhanSu.UI
             ChamCong control = new ChamCong();
             addUserControl(control);
         }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien control = new QuanLyNhanVien();
+            addUserControl(control);
+        }
+
+        private void rjButton10_Click(object sender, EventArgs e)
+        {
+            ChucVuNhanVien control = new ChucVuNhanVien();
+            addUserControl(control);
+        }
+
+        private void rjButton11_Click(object sender, EventArgs e)
+        {
+            NgoaiNguNhanVien control = new NgoaiNguNhanVien();
+            addUserControl(control);
+        }
+
+        private void rjButton12_Click(object sender, EventArgs e)
+        {
+            CheDoNhanVien control = new CheDoNhanVien();
+            addUserControl(control);
+        }
+
+        private void rjButton13_Click(object sender, EventArgs e)
+        {
+            BaoHienNhanVien control = new BaoHienNhanVien();
+            addUserControl(control);
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            BacLuong control = new BacLuong();
+            addUserControl(control);
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            PhongBan control = new PhongBan();
+            addUserControl(control);
+        }
+
+        private void rjButton6_Click(object sender, EventArgs e)
+        {
+            TrinhDo control = new TrinhDo();
+            addUserControl(control);
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            NgoaiNgu control = new NgoaiNgu();
+            addUserControl(control);
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            ChucVu control = new ChucVu();
+            addUserControl(control);
+        }
+
+        private void rjButton9_Click(object sender, EventArgs e)
+        {
+            CheDo control = new CheDo();
+            addUserControl(control);
+        }
+
+        private void rjButton8_Click(object sender, EventArgs e)
+        {
+            BaoHienNhanVien control = new BaoHienNhanVien();
+            addUserControl(control);
+        }
+
+        private void rjButton7_Click(object sender, EventArgs e)
+        {
+            ChamCong control = new ChamCong();
+            addUserControl(control);
+        }
     }
 }

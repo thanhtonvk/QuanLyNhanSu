@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChamCong));
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayCC = new System.Windows.Forms.DateTimePicker();
@@ -45,20 +44,18 @@
             this.panelPhongBan = new System.Windows.Forms.Panel();
             this.textBoxMaNhanVien = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.textGhiChu = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textGioRa = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textGioVao = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textGhiChu = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textGioRa = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textGioVao = new System.Windows.Forms.TextBox();
             this.panelPhongBan.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -184,7 +181,6 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button3);
@@ -207,43 +203,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1264, 132);
             this.panelMenu.TabIndex = 7;
-            // 
-            // textGhiChu
-            // 
-            this.textGhiChu.Location = new System.Drawing.Point(672, 37);
-            this.textGhiChu.Name = "textGhiChu";
-            this.textGhiChu.Size = new System.Drawing.Size(165, 20);
-            this.textGhiChu.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(618, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 19);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Ghi chú ";
-            // 
-            // textGioRa
-            // 
-            this.textGioRa.Location = new System.Drawing.Point(396, 68);
-            this.textGioRa.Name = "textGioRa";
-            this.textGioRa.Size = new System.Drawing.Size(200, 20);
-            this.textGioRa.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(278, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 19);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Giờ ra";
-            // 
-            // textGioVao
-            // 
-            this.textGioVao.Location = new System.Drawing.Point(100, 68);
-            this.textGioVao.Name = "textGioVao";
-            this.textGioVao.Size = new System.Drawing.Size(165, 20);
-            this.textGioVao.TabIndex = 30;
             // 
             // button1
             // 
@@ -309,16 +268,42 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // pictureBox1
+            // textGhiChu
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1144, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 45;
-            this.pictureBox1.TabStop = false;
+            this.textGhiChu.Location = new System.Drawing.Point(672, 37);
+            this.textGhiChu.Name = "textGhiChu";
+            this.textGhiChu.Size = new System.Drawing.Size(165, 20);
+            this.textGhiChu.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(618, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 19);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Ghi chú ";
+            // 
+            // textGioRa
+            // 
+            this.textGioRa.Location = new System.Drawing.Point(396, 68);
+            this.textGioRa.Name = "textGioRa";
+            this.textGioRa.Size = new System.Drawing.Size(200, 20);
+            this.textGioRa.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(278, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 19);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Giờ ra";
+            // 
+            // textGioVao
+            // 
+            this.textGioVao.Location = new System.Drawing.Point(100, 68);
+            this.textGioVao.Name = "textGioVao";
+            this.textGioVao.Size = new System.Drawing.Size(165, 20);
+            this.textGioVao.TabIndex = 30;
             // 
             // ChamCong
             // 
@@ -332,7 +317,6 @@
             this.panelPhongBan.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +348,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

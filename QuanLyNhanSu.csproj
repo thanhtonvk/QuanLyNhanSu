@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomUI\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DAO\BacLuongDAO.cs" />
     <Compile Include="DAO\BaoHiemDAO.cs" />
     <Compile Include="DAO\BaoHiemNhanVienDAO.cs" />
@@ -265,6 +268,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="database.sql" />
+    <Content Include="Resources\background.png" />
+    <Content Include="Resources\logo-removebg-preview.png" />
     <Content Include="Resources\logo.jpg" />
     <Content Include="Resources\icon.jpg" />
     <None Include="Resources\delete %281%29.png" />

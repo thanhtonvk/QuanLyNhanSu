@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaoHienNhanVien));
             this.listPage = new System.Windows.Forms.ListView();
             this.MaNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TenNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,19 +49,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelPhongBan = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBoxGhichu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNoiCap = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.buttonLamMoi = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPhongBan.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listPage
@@ -220,7 +217,6 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button3);
@@ -245,36 +241,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1264, 135);
             this.panelMenu.TabIndex = 9;
-            // 
-            // textBoxGhichu
-            // 
-            this.textBoxGhichu.Location = new System.Drawing.Point(659, 65);
-            this.textBoxGhichu.Name = "textBoxGhichu";
-            this.textBoxGhichu.Size = new System.Drawing.Size(165, 20);
-            this.textBoxGhichu.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(575, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 19);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Ghi chú";
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(572, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 19);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Nơi cấp";
-            // 
-            // textBoxNoiCap
-            // 
-            this.textBoxNoiCap.Location = new System.Drawing.Point(659, 40);
-            this.textBoxNoiCap.Name = "textBoxNoiCap";
-            this.textBoxNoiCap.Size = new System.Drawing.Size(165, 20);
-            this.textBoxNoiCap.TabIndex = 31;
             // 
             // button1
             // 
@@ -318,6 +284,36 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // textBoxGhichu
+            // 
+            this.textBoxGhichu.Location = new System.Drawing.Point(659, 65);
+            this.textBoxGhichu.Name = "textBoxGhichu";
+            this.textBoxGhichu.Size = new System.Drawing.Size(165, 20);
+            this.textBoxGhichu.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(575, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 19);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Ghi chú";
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(572, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 19);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Nơi cấp";
+            // 
+            // textBoxNoiCap
+            // 
+            this.textBoxNoiCap.Location = new System.Drawing.Point(659, 40);
+            this.textBoxNoiCap.Name = "textBoxNoiCap";
+            this.textBoxNoiCap.Size = new System.Drawing.Size(165, 20);
+            this.textBoxNoiCap.TabIndex = 31;
+            // 
             // buttonLamMoi
             // 
             this.buttonLamMoi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -340,17 +336,6 @@
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1144, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
             // BaoHienNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,7 +348,6 @@
             this.panelPhongBan.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,6 +384,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

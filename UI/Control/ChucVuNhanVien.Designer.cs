@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChucVuNhanVien));
             this.panelPhongBan = new System.Windows.Forms.Panel();
             this.listPage = new System.Windows.Forms.ListView();
             this.MaNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,17 +45,15 @@
             this.dateTimePickerNgayBd = new System.Windows.Forms.DateTimePicker();
             this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.dateTimePickerNgayKt = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTimePickerNgayKt = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelPhongBan.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPhongBan
@@ -191,7 +188,6 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.button1);
@@ -212,21 +208,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1264, 130);
             this.panelMenu.TabIndex = 5;
-            // 
-            // dateTimePickerNgayKt
-            // 
-            this.dateTimePickerNgayKt.Location = new System.Drawing.Point(359, 66);
-            this.dateTimePickerNgayKt.Name = "dateTimePickerNgayKt";
-            this.dateTimePickerNgayKt.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerNgayKt.TabIndex = 30;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(271, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 19);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Ngày kết thúc";
             // 
             // button4
             // 
@@ -292,16 +273,20 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // dateTimePickerNgayKt
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1144, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
+            this.dateTimePickerNgayKt.Location = new System.Drawing.Point(359, 66);
+            this.dateTimePickerNgayKt.Name = "dateTimePickerNgayKt";
+            this.dateTimePickerNgayKt.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerNgayKt.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(271, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 19);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Ngày kết thúc";
             // 
             // ChucVuNhanVien
             // 
@@ -315,7 +300,6 @@
             this.panelPhongBan.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,6 +329,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

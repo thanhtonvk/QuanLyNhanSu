@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BacLuong));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxHeSoBacLuong = new System.Windows.Forms.TextBox();
+            this.update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,18 +44,13 @@
             this.Ma = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hesoluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.update = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelPhongBan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panelMenu.Controls.Add(this.label4);
             this.panelMenu.Controls.Add(this.textBoxHeSoBacLuong);
             this.panelMenu.Controls.Add(this.update);
@@ -85,6 +82,48 @@
             this.textBoxHeSoBacLuong.Size = new System.Drawing.Size(165, 20);
             this.textBoxHeSoBacLuong.TabIndex = 12;
             this.textBoxHeSoBacLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.check);
+            // 
+            // update
+            // 
+            this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.update.Image = global::QuanLyNhanSu.Properties.Resources.rotation;
+            this.update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.update.Location = new System.Drawing.Point(488, 66);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(95, 35);
+            this.update.TabIndex = 11;
+            this.update.Text = "Cập nhật";
+            this.update.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.delete.Image = global::QuanLyNhanSu.Properties.Resources.delete;
+            this.delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.delete.Location = new System.Drawing.Point(589, 66);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(80, 37);
+            this.delete.TabIndex = 10;
+            this.delete.Text = "Xóa ";
+            this.delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // add
+            // 
+            this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.add.Image = global::QuanLyNhanSu.Properties.Resources.add__1_;
+            this.add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.add.Location = new System.Drawing.Point(387, 66);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(95, 34);
+            this.add.TabIndex = 9;
+            this.add.Text = "Thêm";
+            this.add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // label3
             // 
@@ -149,7 +188,7 @@
             this.listPage.HideSelection = false;
             this.listPage.Location = new System.Drawing.Point(3, 3);
             this.listPage.Name = "listPage";
-            this.listPage.Size = new System.Drawing.Size(750, 545);
+            this.listPage.Size = new System.Drawing.Size(1258, 545);
             this.listPage.TabIndex = 0;
             this.listPage.Tag = "";
             this.listPage.UseCompatibleStateImageBehavior = false;
@@ -170,59 +209,6 @@
             // 
             this.hesoluong.Text = "Hệ số lương";
             // 
-            // update
-            // 
-            this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.update.Image = global::QuanLyNhanSu.Properties.Resources.rotation;
-            this.update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.update.Location = new System.Drawing.Point(488, 66);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(95, 35);
-            this.update.TabIndex = 11;
-            this.update.Text = "Cập nhật";
-            this.update.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.update.UseVisualStyleBackColor = false;
-            this.update.Click += new System.EventHandler(this.update_Click);
-            // 
-            // delete
-            // 
-            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.delete.Image = global::QuanLyNhanSu.Properties.Resources.delete;
-            this.delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete.Location = new System.Drawing.Point(589, 66);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(80, 37);
-            this.delete.TabIndex = 10;
-            this.delete.Text = "Xóa ";
-            this.delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.delete.UseVisualStyleBackColor = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            // 
-            // add
-            // 
-            this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.add.Image = global::QuanLyNhanSu.Properties.Resources.add__1_;
-            this.add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.add.Location = new System.Drawing.Point(387, 66);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(95, 34);
-            this.add.TabIndex = 9;
-            this.add.Text = "Thêm";
-            this.add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.add.UseVisualStyleBackColor = false;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1141, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // BacLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,7 +222,6 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panelPhongBan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,6 +244,5 @@
         private System.Windows.Forms.ColumnHeader Ma;
         private System.Windows.Forms.ColumnHeader Ten;
         private System.Windows.Forms.ColumnHeader hesoluong;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
