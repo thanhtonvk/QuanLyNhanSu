@@ -76,3 +76,4 @@ D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Control.TrinhDo.r
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Main.resources
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Start.resources
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.BangLuong.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FrmNhanVien.resources

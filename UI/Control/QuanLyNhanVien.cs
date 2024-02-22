@@ -439,5 +439,13 @@ namespace QuanLyNhanSu.UI.Control
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmNhanVien frm = new FrmNhanVien();
+            frm.Closed += (s, args) => this.Hide();
+            frm.Show();
+        }
     }
 }
