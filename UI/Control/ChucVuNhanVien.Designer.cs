@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelPhongBan = new System.Windows.Forms.Panel();
-            this.listPage = new System.Windows.Forms.ListView();
-            this.MaNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TenNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.maCv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tenCv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ngaybd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ngaykt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxMaNhanVien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,71 +44,18 @@
             this.button3 = new System.Windows.Forms.Button();
             this.dateTimePickerNgayKt = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.panelPhongBan.SuspendLayout();
+            this.listPage = new System.Windows.Forms.ListView();
+            this.MaNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TenNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.maCv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tenCv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngaybd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngaykt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panelPhongBan = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelPhongBan.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelPhongBan
-            // 
-            this.panelPhongBan.Controls.Add(this.listPage);
-            this.panelPhongBan.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPhongBan.Location = new System.Drawing.Point(0, 130);
-            this.panelPhongBan.Name = "panelPhongBan";
-            this.panelPhongBan.Size = new System.Drawing.Size(1264, 527);
-            this.panelPhongBan.TabIndex = 4;
-            // 
-            // listPage
-            // 
-            this.listPage.AccessibleName = "";
-            this.listPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listPage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MaNhanVien,
-            this.TenNhanVien,
-            this.maCv,
-            this.tenCv,
-            this.ngaybd,
-            this.ngaykt});
-            this.listPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listPage.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.listPage.HideSelection = false;
-            this.listPage.Location = new System.Drawing.Point(0, 0);
-            this.listPage.Name = "listPage";
-            this.listPage.Size = new System.Drawing.Size(1264, 527);
-            this.listPage.TabIndex = 0;
-            this.listPage.Tag = "";
-            this.listPage.UseCompatibleStateImageBehavior = false;
-            this.listPage.View = System.Windows.Forms.View.Details;
-            this.listPage.SelectedIndexChanged += new System.EventHandler(this.listPage_SelectedIndexChanged);
-            // 
-            // MaNhanVien
-            // 
-            this.MaNhanVien.Text = "Mã nhân viên";
-            this.MaNhanVien.Width = 82;
-            // 
-            // TenNhanVien
-            // 
-            this.TenNhanVien.Text = "Tên nhân viên";
-            this.TenNhanVien.Width = 126;
-            // 
-            // maCv
-            // 
-            this.maCv.Text = "Mã chức vụ";
-            this.maCv.Width = 111;
-            // 
-            // tenCv
-            // 
-            this.tenCv.Text = "Tên chức vụ";
-            this.tenCv.Width = 150;
-            // 
-            // ngaybd
-            // 
-            this.ngaybd.Text = "Ngày bắt đâu";
-            this.ngaybd.Width = 111;
-            // 
-            // ngaykt
-            // 
-            this.ngaykt.Text = "Ngày kết thúc";
-            this.ngaykt.Width = 129;
             // 
             // label2
             // 
@@ -188,6 +127,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button6);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.button1);
@@ -206,7 +146,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1264, 130);
+            this.panelMenu.Size = new System.Drawing.Size(1000, 130);
             this.panelMenu.TabIndex = 5;
             // 
             // button4
@@ -288,6 +228,81 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Ngày kết thúc";
             // 
+            // listPage
+            // 
+            this.listPage.AccessibleName = "";
+            this.listPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listPage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MaNhanVien,
+            this.TenNhanVien,
+            this.maCv,
+            this.tenCv,
+            this.ngaybd,
+            this.ngaykt});
+            this.listPage.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listPage.HideSelection = false;
+            this.listPage.Location = new System.Drawing.Point(0, 0);
+            this.listPage.Name = "listPage";
+            this.listPage.Size = new System.Drawing.Size(997, 367);
+            this.listPage.TabIndex = 0;
+            this.listPage.Tag = "";
+            this.listPage.UseCompatibleStateImageBehavior = false;
+            this.listPage.View = System.Windows.Forms.View.Details;
+            this.listPage.SelectedIndexChanged += new System.EventHandler(this.listPage_SelectedIndexChanged);
+            // 
+            // MaNhanVien
+            // 
+            this.MaNhanVien.Text = "Mã nhân viên";
+            this.MaNhanVien.Width = 82;
+            // 
+            // TenNhanVien
+            // 
+            this.TenNhanVien.Text = "Tên nhân viên";
+            this.TenNhanVien.Width = 126;
+            // 
+            // maCv
+            // 
+            this.maCv.Text = "Mã chức vụ";
+            this.maCv.Width = 111;
+            // 
+            // tenCv
+            // 
+            this.tenCv.Text = "Tên chức vụ";
+            this.tenCv.Width = 150;
+            // 
+            // ngaybd
+            // 
+            this.ngaybd.Text = "Ngày bắt đâu";
+            this.ngaybd.Width = 111;
+            // 
+            // ngaykt
+            // 
+            this.ngaykt.Text = "Ngày kết thúc";
+            this.ngaykt.Width = 129;
+            // 
+            // panelPhongBan
+            // 
+            this.panelPhongBan.Controls.Add(this.listPage);
+            this.panelPhongBan.Location = new System.Drawing.Point(0, 130);
+            this.panelPhongBan.Name = "panelPhongBan";
+            this.panelPhongBan.Size = new System.Drawing.Size(1126, 422);
+            this.panelPhongBan.TabIndex = 4;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Location = new System.Drawing.Point(763, 94);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 34);
+            this.button6.TabIndex = 61;
+            this.button6.Text = "Xuất danh sách ";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // ChucVuNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,24 +310,16 @@
             this.Controls.Add(this.panelPhongBan);
             this.Controls.Add(this.panelMenu);
             this.Name = "ChucVuNhanVien";
-            this.Size = new System.Drawing.Size(1264, 657);
+            this.Size = new System.Drawing.Size(1000, 500);
             this.Load += new System.EventHandler(this.ChucVuNhanVien_Load);
-            this.panelPhongBan.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            this.panelPhongBan.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelPhongBan;
-        private System.Windows.Forms.ListView listPage;
-        private System.Windows.Forms.ColumnHeader MaNhanVien;
-        private System.Windows.Forms.ColumnHeader TenNhanVien;
-        private System.Windows.Forms.ColumnHeader maCv;
-        private System.Windows.Forms.ColumnHeader tenCv;
-        private System.Windows.Forms.ColumnHeader ngaybd;
-        private System.Windows.Forms.ColumnHeader ngaykt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxMaNhanVien;
         private System.Windows.Forms.Label label1;
@@ -329,5 +336,14 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListView listPage;
+        private System.Windows.Forms.ColumnHeader MaNhanVien;
+        private System.Windows.Forms.ColumnHeader TenNhanVien;
+        private System.Windows.Forms.ColumnHeader maCv;
+        private System.Windows.Forms.ColumnHeader tenCv;
+        private System.Windows.Forms.ColumnHeader ngaybd;
+        private System.Windows.Forms.ColumnHeader ngaykt;
+        private System.Windows.Forms.Panel panelPhongBan;
+        private System.Windows.Forms.Button button6;
     }
 }

@@ -34,14 +34,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ghichu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.GioRa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.GioVao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NgayChamCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaCC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listPage = new System.Windows.Forms.ListView();
-            this.panelPhongBan = new System.Windows.Forms.Panel();
             this.textBoxMaNhanVien = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,8 +46,16 @@
             this.textGioRa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textGioVao = new System.Windows.Forms.TextBox();
-            this.panelPhongBan.SuspendLayout();
+            this.listPage = new System.Windows.Forms.ListView();
+            this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NgayChamCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GioVao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GioRa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ghichu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panelPhongBan = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelPhongBan.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -109,68 +109,6 @@
             this.label2.Text = "Chấm công";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ghichu
-            // 
-            this.ghichu.Text = "Ghi chú";
-            this.ghichu.Width = 129;
-            // 
-            // GioRa
-            // 
-            this.GioRa.Text = "Giờ ra";
-            this.GioRa.Width = 111;
-            // 
-            // GioVao
-            // 
-            this.GioVao.Text = "Giờ vào";
-            this.GioVao.Width = 150;
-            // 
-            // NgayChamCong
-            // 
-            this.NgayChamCong.Text = "Ngày chấm công";
-            this.NgayChamCong.Width = 111;
-            // 
-            // MaNV
-            // 
-            this.MaNV.Text = "Mã nhân viên";
-            this.MaNV.Width = 126;
-            // 
-            // MaCC
-            // 
-            this.MaCC.Text = "Mã chấm công";
-            this.MaCC.Width = 82;
-            // 
-            // listPage
-            // 
-            this.listPage.AccessibleName = "";
-            this.listPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listPage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MaCC,
-            this.MaNV,
-            this.NgayChamCong,
-            this.GioVao,
-            this.GioRa,
-            this.ghichu});
-            this.listPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listPage.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.listPage.HideSelection = false;
-            this.listPage.Location = new System.Drawing.Point(0, 0);
-            this.listPage.Name = "listPage";
-            this.listPage.Size = new System.Drawing.Size(1264, 527);
-            this.listPage.TabIndex = 0;
-            this.listPage.Tag = "";
-            this.listPage.UseCompatibleStateImageBehavior = false;
-            this.listPage.View = System.Windows.Forms.View.Details;
-            this.listPage.SelectedIndexChanged += new System.EventHandler(this.listPage_SelectedIndexChanged);
-            // 
-            // panelPhongBan
-            // 
-            this.panelPhongBan.Controls.Add(this.listPage);
-            this.panelPhongBan.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPhongBan.Location = new System.Drawing.Point(0, 130);
-            this.panelPhongBan.Name = "panelPhongBan";
-            this.panelPhongBan.Size = new System.Drawing.Size(1264, 527);
-            this.panelPhongBan.TabIndex = 6;
-            // 
             // textBoxMaNhanVien
             // 
             this.textBoxMaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -181,6 +119,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button6);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button3);
@@ -201,7 +140,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1264, 132);
+            this.panelMenu.Size = new System.Drawing.Size(1000, 132);
             this.panelMenu.TabIndex = 7;
             // 
             // button1
@@ -305,6 +244,75 @@
             this.textGioVao.Size = new System.Drawing.Size(165, 20);
             this.textGioVao.TabIndex = 30;
             // 
+            // listPage
+            // 
+            this.listPage.AccessibleName = "";
+            this.listPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listPage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MaNV,
+            this.NgayChamCong,
+            this.GioVao,
+            this.GioRa,
+            this.ghichu});
+            this.listPage.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listPage.HideSelection = false;
+            this.listPage.Location = new System.Drawing.Point(0, 0);
+            this.listPage.Name = "listPage";
+            this.listPage.Size = new System.Drawing.Size(1000, 367);
+            this.listPage.TabIndex = 0;
+            this.listPage.Tag = "";
+            this.listPage.UseCompatibleStateImageBehavior = false;
+            this.listPage.View = System.Windows.Forms.View.Details;
+            this.listPage.SelectedIndexChanged += new System.EventHandler(this.listPage_SelectedIndexChanged);
+            // 
+            // MaNV
+            // 
+            this.MaNV.Text = "Mã nhân viên";
+            this.MaNV.Width = 126;
+            // 
+            // NgayChamCong
+            // 
+            this.NgayChamCong.Text = "Ngày chấm công";
+            this.NgayChamCong.Width = 111;
+            // 
+            // GioVao
+            // 
+            this.GioVao.Text = "Giờ vào";
+            this.GioVao.Width = 150;
+            // 
+            // GioRa
+            // 
+            this.GioRa.Text = "Giờ ra";
+            this.GioRa.Width = 111;
+            // 
+            // ghichu
+            // 
+            this.ghichu.Text = "Ghi chú";
+            this.ghichu.Width = 129;
+            // 
+            // panelPhongBan
+            // 
+            this.panelPhongBan.Controls.Add(this.listPage);
+            this.panelPhongBan.Location = new System.Drawing.Point(0, 130);
+            this.panelPhongBan.Name = "panelPhongBan";
+            this.panelPhongBan.Size = new System.Drawing.Size(997, 367);
+            this.panelPhongBan.TabIndex = 6;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Location = new System.Drawing.Point(723, 95);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 34);
+            this.button6.TabIndex = 61;
+            this.button6.Text = "Xuất danh sách ";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // ChamCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,11 +320,11 @@
             this.Controls.Add(this.panelPhongBan);
             this.Controls.Add(this.panelMenu);
             this.Name = "ChamCong";
-            this.Size = new System.Drawing.Size(1264, 657);
+            this.Size = new System.Drawing.Size(1000, 500);
             this.Load += new System.EventHandler(this.ChamCong_Load);
-            this.panelPhongBan.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            this.panelPhongBan.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -328,14 +336,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColumnHeader ghichu;
-        private System.Windows.Forms.ColumnHeader GioRa;
-        private System.Windows.Forms.ColumnHeader GioVao;
-        private System.Windows.Forms.ColumnHeader NgayChamCong;
-        private System.Windows.Forms.ColumnHeader MaNV;
-        private System.Windows.Forms.ColumnHeader MaCC;
-        private System.Windows.Forms.ListView listPage;
-        private System.Windows.Forms.Panel panelPhongBan;
         private System.Windows.Forms.TextBox textBoxMaNhanVien;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.TextBox textGhiChu;
@@ -348,5 +348,13 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListView listPage;
+        private System.Windows.Forms.ColumnHeader MaNV;
+        private System.Windows.Forms.ColumnHeader NgayChamCong;
+        private System.Windows.Forms.ColumnHeader GioVao;
+        private System.Windows.Forms.ColumnHeader GioRa;
+        private System.Windows.Forms.ColumnHeader ghichu;
+        private System.Windows.Forms.Panel panelPhongBan;
+        private System.Windows.Forms.Button button6;
     }
 }

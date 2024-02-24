@@ -79,7 +79,7 @@ namespace QuanLyNhanSu.DAO
         {
             List<NhanVien> nhanViens = new List<NhanVien>();
             string query =
-                $"select NhanVien.MaNV, TenNV, NgaySinh, DiaChi, GioiTinh, TenPB, TenTD, TenBL, NhanVien.MaPB, NhanVien.MaTD, NhanVien.MaBL " +
+                $"select NhanVien.MaNV, TenNV, HinhAnh,NgaySinh, DiaChi,SoCCD,NgayCap,NoiCap,SDTRieng,SDTNha,TinhTrangHonNhan, GioiTinh, TenPB, TenTD, TenBL, NhanVien.MaPB, NhanVien.MaTD, NhanVien.MaBL " +
                 $"from NhanVien, PhongBan, TrinhDo, BacLuong " +
                 $"where NhanVien.MaPB = PhongBan.MaPB   and NhanVien.MaTD = TrinhDo.MaTD   and NhanVien.MaBL = BacLuong.MaBL   and (NhanVien.MaNV like '%{keyword}%' or TenNV like '%{keyword}%' or NgaySinh like '%{keyword}%' or DiaChi like '%{keyword}%' or TenPB like '%{keyword}%' or TenTD like '%{keyword}%' or TenTD like '%{keyword}%')";
             DataTable dataTable = _handle.ExecuteQuery(query);

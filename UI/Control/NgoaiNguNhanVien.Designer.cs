@@ -48,12 +48,14 @@
             this.MaNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelPhongBan = new System.Windows.Forms.Panel();
             this.listPage = new System.Windows.Forms.ListView();
+            this.button6 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPhongBan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button6);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.button1);
@@ -70,7 +72,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1264, 130);
+            this.panelMenu.Size = new System.Drawing.Size(1000, 130);
             this.panelMenu.TabIndex = 7;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -140,7 +142,7 @@
             // 
             // textBoxTimKiem
             // 
-            this.textBoxTimKiem.Location = new System.Drawing.Point(285, 95);
+            this.textBoxTimKiem.Location = new System.Drawing.Point(287, 95);
             this.textBoxTimKiem.Multiline = true;
             this.textBoxTimKiem.Name = "textBoxTimKiem";
             this.textBoxTimKiem.Size = new System.Drawing.Size(346, 36);
@@ -228,9 +230,9 @@
             // 
             this.panelPhongBan.Controls.Add(this.listPage);
             this.panelPhongBan.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPhongBan.Location = new System.Drawing.Point(0, 136);
+            this.panelPhongBan.Location = new System.Drawing.Point(0, -21);
             this.panelPhongBan.Name = "panelPhongBan";
-            this.panelPhongBan.Size = new System.Drawing.Size(1264, 521);
+            this.panelPhongBan.Size = new System.Drawing.Size(1000, 521);
             this.panelPhongBan.TabIndex = 6;
             // 
             // listPage
@@ -247,12 +249,27 @@
             this.listPage.HideSelection = false;
             this.listPage.Location = new System.Drawing.Point(0, 0);
             this.listPage.Name = "listPage";
-            this.listPage.Size = new System.Drawing.Size(1264, 521);
+            this.listPage.Size = new System.Drawing.Size(1000, 521);
             this.listPage.TabIndex = 0;
             this.listPage.Tag = "";
             this.listPage.UseCompatibleStateImageBehavior = false;
             this.listPage.View = System.Windows.Forms.View.Details;
             this.listPage.SelectedIndexChanged += new System.EventHandler(this.listPage_SelectedIndexChanged);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Location = new System.Drawing.Point(734, 95);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 34);
+            this.button6.TabIndex = 61;
+            this.button6.Text = "Xuất danh sách ";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // NgoaiNguNhanVien
             // 
@@ -261,7 +278,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelPhongBan);
             this.Name = "NgoaiNguNhanVien";
-            this.Size = new System.Drawing.Size(1264, 657);
+            this.Size = new System.Drawing.Size(1000, 500);
             this.Load += new System.EventHandler(this.NgoaiNguNhanVien_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
@@ -292,5 +309,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
     }
 }

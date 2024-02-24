@@ -1,6 +1,8 @@
-﻿using QuanLyNhanSu.DAO;
+﻿using ArrayToExcel;
+using QuanLyNhanSu.DAO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace QuanLyNhanSu.UI.Control
@@ -176,6 +178,17 @@ namespace QuanLyNhanSu.UI.Control
                 {
                     MessageBox.Show("Xóa không thành công!");
                 }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var excel = _dao.Get().ToExcel();
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = ("Excel File|*.xlsx");
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllBytes(saveFileDialog.FileName, excel);
             }
         }
     }

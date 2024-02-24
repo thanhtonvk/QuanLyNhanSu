@@ -77,3 +77,10 @@ D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Main.resources
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.Start.resources
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.BangLuong.resources
 D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FrmNhanVien.resources
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\ArrayToExcel.dll
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.ResolveComReference.cache
+D:\Winform\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete

@@ -58,6 +58,7 @@
             this.textBoxNoiCap = new System.Windows.Forms.TextBox();
             this.buttonLamMoi = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panelPhongBan.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -217,6 +218,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button3);
@@ -336,6 +338,21 @@
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(723, 95);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 34);
+            this.button4.TabIndex = 61;
+            this.button4.Text = "Xuất danh sách ";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // BaoHienNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +401,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

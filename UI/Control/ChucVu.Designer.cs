@@ -41,6 +41,7 @@
             this.textBoxMa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelPhongBan = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPhongBan.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             this.listPage.HideSelection = false;
             this.listPage.Location = new System.Drawing.Point(3, 3);
             this.listPage.Name = "listPage";
-            this.listPage.Size = new System.Drawing.Size(1261, 545);
+            this.listPage.Size = new System.Drawing.Size(994, 391);
             this.listPage.TabIndex = 0;
             this.listPage.Tag = "";
             this.listPage.UseCompatibleStateImageBehavior = false;
@@ -75,6 +76,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button3);
@@ -86,7 +88,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1264, 100);
+            this.panelMenu.Size = new System.Drawing.Size(1000, 100);
             this.panelMenu.TabIndex = 5;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -182,12 +184,26 @@
             // panelPhongBan
             // 
             this.panelPhongBan.Controls.Add(this.listPage);
-            this.panelPhongBan.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPhongBan.Location = new System.Drawing.Point(0, 106);
             this.panelPhongBan.Name = "panelPhongBan";
-            this.panelPhongBan.Size = new System.Drawing.Size(1264, 551);
+            this.panelPhongBan.Size = new System.Drawing.Size(1008, 422);
             this.panelPhongBan.TabIndex = 4;
             this.panelPhongBan.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPhongBan_Paint);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(588, 60);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 34);
+            this.button4.TabIndex = 61;
+            this.button4.Text = "Xuất danh sách ";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ChucVu
             // 
@@ -196,7 +212,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelPhongBan);
             this.Name = "ChucVu";
-            this.Size = new System.Drawing.Size(1264, 657);
+            this.Size = new System.Drawing.Size(1000, 500);
             this.Load += new System.EventHandler(this.ChucVu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
@@ -220,5 +236,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

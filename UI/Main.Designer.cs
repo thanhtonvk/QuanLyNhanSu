@@ -54,7 +54,7 @@
             this.panelContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelContainer.Location = new System.Drawing.Point(126, 31);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1230, 654);
+            this.panelContainer.Size = new System.Drawing.Size(1000, 500);
             this.panelContainer.TabIndex = 1;
             // 
             // rjButton1
@@ -321,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1368, 710);
+            this.ClientSize = new System.Drawing.Size(1129, 539);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rjButton13);
             this.Controls.Add(this.rjButton12);

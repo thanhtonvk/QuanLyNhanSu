@@ -39,11 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelPhongBan = new System.Windows.Forms.Panel();
             this.listPage = new System.Windows.Forms.ListView();
             this.Ma = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hesoluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panelPhongBan = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPhongBan.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.label4);
             this.panelMenu.Controls.Add(this.textBoxHeSoBacLuong);
             this.panelMenu.Controls.Add(this.update);
@@ -64,7 +66,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1264, 100);
+            this.panelMenu.Size = new System.Drawing.Size(1000, 100);
             this.panelMenu.TabIndex = 7;
             // 
             // label4
@@ -167,15 +169,6 @@
             this.label2.Text = "Bậc lương";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panelPhongBan
-            // 
-            this.panelPhongBan.Controls.Add(this.listPage);
-            this.panelPhongBan.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPhongBan.Location = new System.Drawing.Point(0, 106);
-            this.panelPhongBan.Name = "panelPhongBan";
-            this.panelPhongBan.Size = new System.Drawing.Size(1264, 551);
-            this.panelPhongBan.TabIndex = 6;
-            // 
             // listPage
             // 
             this.listPage.AccessibleName = "";
@@ -186,9 +179,9 @@
             this.hesoluong});
             this.listPage.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listPage.HideSelection = false;
-            this.listPage.Location = new System.Drawing.Point(3, 3);
+            this.listPage.Location = new System.Drawing.Point(3, 0);
             this.listPage.Name = "listPage";
-            this.listPage.Size = new System.Drawing.Size(1258, 545);
+            this.listPage.Size = new System.Drawing.Size(991, 388);
             this.listPage.TabIndex = 0;
             this.listPage.Tag = "";
             this.listPage.UseCompatibleStateImageBehavior = false;
@@ -198,16 +191,40 @@
             // Ma
             // 
             this.Ma.Text = "Mã bậc lương";
-            this.Ma.Width = 291;
+            this.Ma.Width = 164;
             // 
             // Ten
             // 
             this.Ten.Text = "Tên bậc lương";
-            this.Ten.Width = 533;
+            this.Ten.Width = 123;
             // 
             // hesoluong
             // 
             this.hesoluong.Text = "Hệ số lương";
+            this.hesoluong.Width = 142;
+            // 
+            // panelPhongBan
+            // 
+            this.panelPhongBan.Controls.Add(this.listPage);
+            this.panelPhongBan.Location = new System.Drawing.Point(0, 106);
+            this.panelPhongBan.Name = "panelPhongBan";
+            this.panelPhongBan.Size = new System.Drawing.Size(997, 391);
+            this.panelPhongBan.TabIndex = 6;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(675, 69);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(119, 30);
+            this.button3.TabIndex = 59;
+            this.button3.Text = "Xuất danh sách ";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BacLuong
             // 
@@ -217,7 +234,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelPhongBan);
             this.Name = "BacLuong";
-            this.Size = new System.Drawing.Size(1264, 657);
+            this.Size = new System.Drawing.Size(1000, 500);
             this.Load += new System.EventHandler(this.BacLuong_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
@@ -239,10 +256,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelPhongBan;
         private System.Windows.Forms.ListView listPage;
         private System.Windows.Forms.ColumnHeader Ma;
         private System.Windows.Forms.ColumnHeader Ten;
         private System.Windows.Forms.ColumnHeader hesoluong;
+        private System.Windows.Forms.Panel panelPhongBan;
+        private System.Windows.Forms.Button button3;
     }
 }
